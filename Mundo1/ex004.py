@@ -3,7 +3,7 @@
 # Passo 1: Receber um valor qualquer
 algo = input('Digite alguma coisa: ')
 
-# Classificar o tipo desse valor e obter as demais informações
+# Passo 2: Classificar o tipo desse valor e obter as demais informações
 print(f'O tipo primitivo de {algo} é {type(algo)}.')
     # Informações adicionais
 print(f'É alfabético? {algo.isalpha()}') # letra(s) alfabética(s)
@@ -18,4 +18,4 @@ print(f'Faz parte da tabela ASCII? {algo.isascii()}') # espaço(s) em branco/vaz
 print(f'Pode ser uma palavra reservada? {algo.isidentifier()}')
 print(f'Pode ser mostrado na tela? {algo.isprintable()}') # "print" é possível
 print(f'Está capitalizada? {algo.istitle()}') # letra maiúscula seguida de minúscula
-# --------------------------------------------------- Desafio [004]
+# ------------------------------------------- Desafio [004]
