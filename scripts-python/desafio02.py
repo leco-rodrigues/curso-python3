@@ -7,4 +7,3 @@ ano = input('Em que ano você nasceu? ')
 
 # Passo 2: Formatar os valores em uma data
 print('A sua data de nascimento é', dia + '/' + mes + '/' + ano + '.')
-    

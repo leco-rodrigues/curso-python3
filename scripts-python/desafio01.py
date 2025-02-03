@@ -5,4 +5,4 @@ nome = input('Qual o seu nome? ')
 
 # Passo 2: Mostrar uma saudação com esse valor
 print('Bem-vindo, ', nome + '!', 'Como vai?')
-    
+ 
