@@ -1,17 +1,17 @@
 # Faça um programa que leia um número inteiro qualquer e mostre na tela a sua tabuada.
 
-# Passo 1: Receber um valor de "número"
-num = float(input('Digite um número para fazer a tabuada: '))
+# Passo 1: Receber um valor para "número inteiro"
+n = int(input('Digite um número para fazer a tabuada: ')) # número inteiro
 
-# Passo 2: Montar a tabuada desse valor
-print(f'{num} x  1 = {num * 1}')
-print(f'{num} x  2 = {num * 2}')
-print(f'{num} x  3 = {num * 3}')
-print(f'{num} x  4 = {num * 4}')
-print(f'{num} x  5 = {num * 5}')
-print(f'{num} x  6 = {num * 6}')
-print(f'{num} x  7 = {num * 7}')
-print(f'{num} x  8 = {num * 8}')
-print(f'{num} x  9 = {num * 9}')
-print(f'{num} x 10 = {num * 10}')
-# ------------------------------- Desafio [009]
+# Passo 2: Montar a tabuada
+print(f'{n} x  1 = {n * 1}\n'
+      f'{n} x  2 = {n * 2}\n'
+      f'{n} x  3 = {n * 3}\n'
+      f'{n} x  4 = {n * 4}\n'
+      f'{n} x  5 = {n * 5}\n'
+      f'{n} x  6 = {n * 6}\n'
+      f'{n} x  7 = {n * 7}\n'
+      f'{n} x  8 = {n * 8}\n'
+      f'{n} x  9 = {n * 9}\n'
+      f'{n} x 10 = {n * 10}')
+# --------------------------- Desafio [009]

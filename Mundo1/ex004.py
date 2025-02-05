@@ -1,23 +1,22 @@
 # Faça um programa que leia algo pelo teclado e mostre na tela o seu tipo primitivo
 # e todas as informações possíveis sobre ele.
 
-# Passo 1: Receber um valor qualquer
-algo = input('Digite alguma coisa: ')
+# Passo 1: Receber um valor para "algo"
+algo = input('Digite qualquer coisa: ')
 
-# Passo 2: Classificar o tipo desse valor
-print(f'O tipo primitivo de {algo} é {type(algo)}.')
-
-# Passo 3: Obter as informações adicionais desse valor
-print(f'É alfabético? {algo.isalpha()}') # letra alfabética
-print(f'É numérico? {algo.isnumeric()}') # número inteiro
-print(f'É alfanumérico? {algo.isalnum()}') # número e/ou letra alfabética
-print(f'É decimal? {algo.isdecimal()}') # número decimal
-print(f'É um dígito? {algo.isdigit()}') # número...(?)
-print(f'Tudo está em maiúsculo? {algo.isupper()}') # autoexplicativo
-print(f'Tudo está tudo em minúsculo? {algo.islower()}') # autoexplicativo
-print(f'Tem apenas espaços? {algo.isspace()}') # espaço(s) em branco (!= espaço vazio)
-print(f'Faz parte da tabela ASCII? {algo.isascii()}') # espaço(s) em branco/vazio ou...(?)
-print(f'Pode ser uma palavra reservada? {algo.isidentifier()}')
-print(f'Pode ser mostrado na tela? {algo.isprintable()}') # "print" é possível
-print(f'Está capitalizada? {algo.istitle()}') # letra maiúscula seguida de minúscula
-# ------------------------------------------- Desafio [004]
+# Passo 2: Classificar o tipo e obter informações adicionais
+print(f'O tipo primitivo de "{algo}" é {type(algo)}.\n' # tipo primitivo
+    # Informações adicionais
+      f'É alfabético? {algo.isalpha()}\n' # letra alfabética
+      f'É numérico? {algo.isnumeric()}\n' # número inteiro
+      f'É alfanumérico? {algo.isalnum()}\n' # número e/ou letra alfabética
+      f'É decimal? {algo.isdecimal()}\n' # número decimal
+      f'É um dígito? {algo.isdigit()}\n' # número...(?)
+      f'Tudo está em maiúsculo? {algo.isupper()}\n' # letra maiúscula
+      f'Tudo está tudo em minúsculo? {algo.islower()}\n' # letra minúscula
+      f'Tem apenas espaços em branco? {algo.isspace()}\n' # espaço em branco (!= espaço vazio)
+      f'Faz parte da tabela ASCII? {algo.isascii()}\n' # espaço em branco/vazio ou...(?)
+      f'Pode ser uma palavra reservada? {algo.isidentifier()}\n' # possível palavra-chave
+      f'Pode ser mostrado na tela? {algo.isprintable()}\n' # "print" é possível
+      f'Todas as palavras estão capitalizadas? {algo.istitle()}') # letra maiúscula seguida de minúscula em toda string
+# --------------------------------------------------------------- Desafio [004]

@@ -1,9 +1,9 @@
 # Desenvolva um programa que leia as duas notas de um aluno, calcule e mostre a sua média.
 
-# Passo 1: Receber dois valores de "notas"
-nota1 = float(input('Digite a nota do primeiro aluno: '))
-nota2 = float(input('Digite a nota do segundo aluno: '))
+# Passo 1: Receber dois valores para "duas notas"
+nota1 = float(input('Digite a primeira nota do aluno: ')) # primeira nota
+nota2 = float(input('Digite a segunda nota do aluno: ')) # segunda nota
 
-# Passo 2: Calcular a média desses dois valores ((a + b) / 2)
-print(f'A média entre {nota1:.1f} e {nota2:.1f} é igual a {(nota1 + nota2) / 2:.1f}.')
-# ------------------------------------------------------------------------------------ Desafio [007]
+# Passo 2: Calcular a média
+print(f'A nota média do aluno ficou {(nota1 + nota2) / 2:.1f}.') # média = (nota1 + nota2) / 2
+# -------------------------------------------------------------- Desafio [007]

@@ -2,10 +2,10 @@
 # e a quantidade de dias pelos quais ele foi alugado.
 # Calcule o preço a pagar, sabendo que o carro custa R$60 por dia e R$0.15 por Km rodado.
 
-# Passo 1: Receber os valores de "Km", "dias"
-km = float(input('Quantos Km foram percorridos durante o aluguel? '))
-dias = int(input('Foram quantos dias de aluguel? '))
+# Passo 1: Receber os valores para "Km" e "dias"
+km = float(input('Quantos Km foram percorridos durante o aluguel? ')) # km percorridos
+dias = int(input('Foram quantos dias de aluguel? ')) # dias de aluguel
 
-# Passo 2: Calcular o preço a ser pago com base nesses valores ((dias * 60) + (km * 0.15))
-print(f'Com base no tempo de aluguel e Km rodados, o preço do aluguel ficou por R${(dias * 60) + (km * 0.15):.2f}.')
+# Passo 2: Calcular o preço do aluguel
+print(f'Com base no tempo de aluguel e Km rodados, o preço ficou em R${(dias * 60) + (km * 0.15):.2f}.') # aluguel = (dia * 60) + (km * 0.15)
 # ------------------------------------------------------------------------------------------------------------------ Desafio [015]

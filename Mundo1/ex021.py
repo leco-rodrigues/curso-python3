@@ -3,9 +3,9 @@ from playsound import playsound
 
 # Faça um programa em Python que abra e reproduza o áudio de um arquivo MP3.
 
-# Passo 1: Definir o valor do arquivo "MP3"
-mp3 = '/Users/Usuario/Documents/Org_Dirs/Audios/.mp3'
+# Passo 1: Definir um valor para o "arquivo MP3"
+audio = 'Mundo1\ex021_Icecreamtruckmelodysong.wav' # arquivo de áudio
 
-# Passo 2: Reproduzir esse arquivo
-playsound(mp3)
-# ------------ Desafio [021]
+# Passo 2: Reproduzir o som
+playsound(audio) # reprodução
+# -------------- Desafio [021]
