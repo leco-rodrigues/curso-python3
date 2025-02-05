@@ -10,4 +10,4 @@ num_real = float(input('Digite um número decimal: '))
 
 # Passo 2: Mostrar apenas a parte inteira desse valor
 print(f'O número {num_real:.2f} tem a parte inteira igual a {trunc(num_real)}.')
-# ------------------------------------------------------------------------ Desafio [016]
+# ------------------------------------------------------------------------------ Desafio [016]

@@ -4,5 +4,5 @@
 nome = input('Qual o seu nome? ')
 
 # Passo 2: Criar uma mensagem de boas-vindas com esse valor
-print(f'Seja muito bem-vindo {nome}! Tudo bem?')
-# ---------------------------------------------- Desafio [002]
+print(f'Seja muito bem-vindo, {nome}! Como vai?')
+# ----------------------------------------------- Desafio [002]
