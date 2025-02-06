@@ -6,7 +6,7 @@
     #     milhar: 1
 
 # Passo 1: Receber um valor para "número"
-n = input('Digite um número de 0 a 9999: ') # número
+n = input('Digite um número de 0 a 9999: ').replace(' ', '').zfill(4) # número
 
 # Passo 2: Separar cada um dos dígitos em unidade, dezena, centena e milhar
 print(f'''Classificando cada um dos dígitos:
