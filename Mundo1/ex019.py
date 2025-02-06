@@ -4,7 +4,7 @@ from random import choice
 # Um professor quer sortear um dos seus quatro alunos para apagar o quadro.
 # Faça um programa que ajude ele, lendo o nome deles e escrevendo o nome do escolhido.
 
-# Passo 1: Receber quatro valores para " quatro alunos"
+# Passo 1: Receber quatro valores para "quatro alunos"
 aluno1 = input('Qual o nome do(a) primeiro(a) aluno(a)? ')
 aluno2 = input('Qual o nome do(a) segundo(a) aluno(a)? ')
 aluno3 = input('Qual o nome do(a) terceiro(a) aluno(a)? ')
