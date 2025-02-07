@@ -6,7 +6,7 @@ distancia = int(input('Qual será a distância, em Km, da viagem? ')) # distânc
 
 # Passo 2: Criar uma condição composta que calcule o preço da passagem
 if distancia <= 200: # condição de preço R$0.50 por Km (distancia * 0.5)
-    print(f'Em uma viagem de {distancia}Km o preço da passagem fica em {distancia * 0.5}.')
+    print(f'Em uma viagem de {distancia}Km o preço da passagem fica em R${distancia * 0.5:.2f}.')
 else:
-    print(f'Em uma viagem de {distancia}Km o preço da passgem fica em {distancia * 0.45}.') # R$0.45 por Km (distancia * 0.45)
+    print(f'Em uma viagem de {distancia}Km o preço da passgem fica em R${distancia * 0.45:.2f}.') # R$0.45 por Km (distancia * 0.45)
 # ----------------------------------------------------------------------------------------- Desafio [031]

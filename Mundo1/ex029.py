@@ -6,6 +6,6 @@ v = int(input('A qual velocidade você estava dirigindo? ')) # velocidade em Km
 
 # Passo 2: Criar uma condição simples para dizer se haverá multa
 if v > 80: # condição para multa
-    print(f'{v}Km?! Sua multa será de R${(v - 80) * 7:.2f}!') # cálculo da multa ((v - 80) * 7)
-print('Agora pode ir.')
-# --------------------- Desafio [029]
+    print(f'{v}Km?! Você será multado em R${(v - 80) * 7:.2f}!') # cálculo da multa ((v - 80) * 7)
+print('Já pode ir. Tenha um bom dia!')
+# ------------------------------------ Desafio [029]
