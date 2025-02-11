@@ -5,9 +5,9 @@ from math import trunc
     # Ex: Digite um número: 6.127
     #     O número 6.127 tem a parte Inteira 6.
 
-# Passo 1: Receber um valor para "número Real"
-n_real = float(input('Digite um número decimal: ')) # número real
+# Passo 1: Receber um valor para "número"
+n_real = float(input('\033[7;40mDigite um número decimal:\033[m ')) # número real
 
-# Passo 2: Mostrar a parte inteira
-print(f'O número {n_real:.2f} tem a parte inteira igual a {trunc(n_real)}.') # parte inteira
-# -------------------------------------------------------------------------- Desafio [016]
+# Passo 2: Exibir a parte inteira
+print(f'\033[1;34mO número {n_real} tem a parte inteira igual a {trunc(n_real)}.\033[m')
+# -------------------------------------------------------------------------------------| Desafio [016]
