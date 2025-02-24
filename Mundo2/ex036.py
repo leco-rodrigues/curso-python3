@@ -7,10 +7,10 @@ salario = float(input('Qual o seu salário? R$'))
 anos_pagando = int(input('Em quantos anos irá pagar o empréstimo? ')) # em quantos anos será pago
 print(f'O valor do empréstimo seria de R${valor_casa:.2f}. Seu salário é de R${salario:.2f}, e você pagará em {anos_pagando} anos?')
 
-# Passo 2: Criar uma condição composta para calcular o valor da prestação mensal (acima de 30% do salário, será negado)
+# Passo 2: Criar uma condição composta para calcular e exibir o valor da prestação mensal
 prestação_mensal = valor_casa / (anos_pagando * 12) # prestação = valor da casa / (anos pagando * 12 (meses por ano))
 if prestação_mensal <= salario * 0.30: # condição para aprovação do empréstimo
     print(f'Empréstimo APROVADO! As mensalidades ficarão em R${prestação_mensal:.2f}.')
 else:
-    print(f'Empréstimo NEGADO! Nessas condições, as mensalidades ficariam em R${prestação_mensal:.2f}, excedendo 30% do seu salário atual.')
+    print(f'Empréstimo NEGADO! Nessas condições, as mensalidades ficariam em R${prestação_mensal:.2f}, excedendo 30% do seu salário atual.') # prestação mensal acima de 30% do salário é negada
 # -----------------------------------------------------------------------------------------------------------------------------------------| Desafio [036]
