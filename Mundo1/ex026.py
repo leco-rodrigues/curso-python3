@@ -4,13 +4,19 @@
     # Em que posição ela aparece a última vez.
 
 # Passo 1: Receber um valor para "frase"
-frase = input('\033[7;40mDigite uma frase:\033[m ').strip().upper() # frase convertida em maiúsculo para facilitar
+frase = input('\033[7;40mDigite uma frase:\033[m ').strip()
 
-# Passo 2: Descobrir e exibir quantas vezes aparece a letra "A"
-print(f'\033[1;34mNa frase "{frase}" a letra "A" aparece {frase.count('A')} vez(es).\033[m') # contagem de aparições
-
-# Passo 3: Criar uma condição simples para descobrir e exibir em que posição ela aparece primeiro e por último
+# Passo 2: Exibir quantas vezes a letra "A" aparece
 if 'A' in frase.upper():
-    print(f'\033[1;34mA letra "A" aparece primeiro na posição {frase.find('A') + 1}.\n' # primeira aparição
-          f'E por último na posição {frase.upper().rfind('A') + 1}.\033[m') # última aparição
-# ------------------------------------------------------------------------| Desafio [026]
+    print(
+          f'\033[1;34mNa frase "{frase}", a letra "A" aparece {frase.upper().count("A")} vez(es).\n'
+
+# Passo 3: Exibir em que posição a letra "A" aparece primeiro
+          f'A letra "A" aparece primeiro na posição {frase.upper().find("A") + 1}.\n'
+
+# Passo 4: Exibir em que posição a letra "A" aparece por último
+          f'A letra "A" aparece por último na posição {frase.upper().rfind("A") + 1}.\033[m'
+          )
+else:
+    print(f'\033[1;35mA letra "A" NÃO aparece na frase "{frase}".\033[m')
+# ----------------------------------------------------------------------| Desafio [026]

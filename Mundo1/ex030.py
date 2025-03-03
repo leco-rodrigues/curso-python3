@@ -1,12 +1,11 @@
 # Crie um programa que leia um número inteiro qualquer e mostre na tela se ele é PAR ou ÍMPAR.
 
-cores = {'limpa':'\033[m', 'pretoebranco':'\033[7;40m', 'negritoroxo':'\033[1;35m'}
 # Passo 1: Receber um valor para "número"
-n = int(input(f'{cores['pretoebranco']}Digite um número inteiro:{cores['limpa']} ')) # número inteiro
+n = int(input('\033[7;40mDigite um número inteiro:\033[m '))
 
-# Passo 2: Criar uma condição composta para dizer se é "par" ou "ímpar"
+# Passo 2: Exibir se é "par" ou "ímpar"
 if n % 2 == 0:
-    print(f'{cores['negritoroxo']}{n} é PAR!{cores['limpa']}')
+    print(f'\033[1;34m{n} é PAR!\033[m')
 else:
-    print(f'{cores['negritoroxo']}{n} é ÍMPAR!{cores['limpa']}')
-# -------------------------------------------------------------| Desafio [030]
+    print(f'\033[1;34m{n} é ÍMPAR!\033[m')
+# ---------------------------------------| Desafio [030]
