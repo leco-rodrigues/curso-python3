@@ -1,16 +1,18 @@
 # Escreva um programa para aprovar o empréstimo bancário para a compra de uma casa. O programa vai perguntar o valor da casa, o salário do comprador e em quantos anos ele vai pagar.
 # Calcule o valor da prestação mensal, sabendo que ela não pode exceder 30% do salário ou então o empréstimo será negado.
 
-# Passo 1: Receber valores para "valor da casa", "salário" e "quantos anos até pagar"
-valor_casa = float(input('Qual o valor da casa? R$')) #  valor do empréstimo
-salario = float(input('Qual o seu salário? R$'))
-anos_pagando = int(input('Em quantos anos irá pagar o empréstimo? ')) # em quantos anos será pago
-print(f'O valor do empréstimo seria de R${valor_casa:.2f}. Seu salário é de R${salario:.2f}, e você pagará em {anos_pagando} anos?')
+cores = {'limpa':'\033[m', 'pretoebranco':'\033[7;40m', 'negritoroxo':'\033[1;35m', 'negritoazul':'\033[1;34m'}
 
-# Passo 2: Criar uma condição composta para calcular e exibir o valor da prestação mensal
-prestação_mensal = valor_casa / (anos_pagando * 12) # prestação = valor da casa / (anos pagando * 12 (meses por ano))
-if prestação_mensal <= salario * 0.30: # condição para aprovação do empréstimo
-    print(f'Empréstimo APROVADO! As mensalidades ficarão em R${prestação_mensal:.2f}.')
+# Passo 1: Receber valores para "empréstimo", "salário" e "anos pagando"
+emprestimo = float(input(f"{cores['pretoebranco']}Qual o valor da casa?{cores['limpa']} R$"))
+salario = float(input(f"{cores['pretoebranco']}Qual o seu salário?{cores['limpa']} R$"))
+anos_pagando = int(input(f"{cores['pretoebranco']}Em quantos anos irá pagar o empréstimo?{cores['limpa']} "))
+print(f"{cores['negritoroxo']}O valor do empréstimo seria de R${emprestimo:.2f}. Seu salário é de R${salario:.2f}, e você pagará em {anos_pagando} anos?{cores['limpa']}")
+
+# Passo 2: Exibir se o empréstimo foi aprovado
+prestação_mensal = emprestimo / (anos_pagando * 12)
+if prestação_mensal <= salario * 0.30:
+    print(f"{cores['negritoazul']}Empréstimo APROVADO! As mensalidades ficarão em R${prestação_mensal:.2f}, por {anos_pagando} anos.{cores['limpa']}")
 else:
-    print(f'Empréstimo NEGADO! Nessas condições, as mensalidades ficariam em R${prestação_mensal:.2f}, excedendo 30% do seu salário atual.') # prestação mensal acima de 30% do salário é negada
-# -----------------------------------------------------------------------------------------------------------------------------------------| Desafio [036]
+    print(f"{cores['negritoazul']}Empréstimo NEGADO! Nessas condições, as mensalidades ficariam em R${prestação_mensal:.2f}, excedendo 30% do seu salário atual.{cores['limpa']}")
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| Desafio [036]

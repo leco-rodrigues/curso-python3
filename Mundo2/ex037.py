@@ -3,15 +3,17 @@
     # 2 para octal
     # 3 para hexadecimal
 
-# Passo 1: Receber um valor para "número"
-n = int(input('Digite um número inteiro: ')) # número inteiro
+cores = {'limpa':'\033[m', 'pretoebranco':'\033[7;40m', 'negritoroxo':'\033[1;35m'}
 
-# Passo 2: Criar um condição aninhada para converter e exibir em binário, octal e hexadecimal
-conversao = int(input(f'Para qual base de conversão deseja converter o número {n}, binário(1), octal(2) ou hexadecimal(3)? '))
+# Passo 1: Receber um valor para "número"
+n = int(input(f"{cores['pretoebranco']}Digite um número:{cores['limpa']} "))
+
+# Passo 2: Exibir em binário, octal e hexadecimal, de acordo com a escolha do usuário
+conversao = int(input(f"{cores['pretoebranco']}Escolha a base conversão para o número {n} - binário(1), octal(2) ou hexadecimal(3):{cores['limpa']} "))
 if conversao == 1:
-    print(f'O número {n}, convertido em binário, fica: {bin(n)}.') # conversão para binário
+    print(f"{cores['negritoroxo']}O número {n}, convertido em binário, fica: {bin(n)}.{cores['limpa']}")
 elif conversao == 2:
-    print(f'O número {n}, convertido em octal, fica: {oct(n)}.') # conversão para octal
+    print(f"{cores['negritoroxo']}O número {n}, convertido em octal, fica: {oct(n)}.{cores['limpa']}")
 else:
-    print(f'O número {n}, convertido em hexadecimal, fica: {hex(n)}.') # conversão para hexadecimal
-# -------------------------------------------------------------------| Desafio [037]
+    print(f"{cores['negritoroxo']}O número {n}, convertido em hexadecimal, fica: {hex(n)}.{cores['limpa']}")
+# ---------------------------------------------------------------------------------------------------------| Desafio [037]
