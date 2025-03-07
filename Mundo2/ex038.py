@@ -9,9 +9,9 @@ cores = {'limpa':'\033[m', 'pretoebranco':'\033[7;40m', 'negritoazul':'\033[1;34
 n1 = int(input(f"{cores['pretoebranco']}Digite o valor do primeiro número:{cores['limpa']} "))
 n2 = int(input(f"{cores['pretoebranco']}Digite o valor do segundo número:{cores['limpa']} "))
 
-# Passo 2: Criar uma condição aninhada para descobrir e exibir qual o maior ou se são iguais
+# Passo 2: Exibir qual o maior ou se são iguais
 if n1 > n2:
-    print(f"{cores['negritoazul']}O primeiro número ({n1}) é MAIOR que o segundo número ({n2})!{cores['limpa']}")
+    print(f"{cores['negritoazul']}O primeiro número ({n1}) é MAIOR que o segundo ({n2})!{cores['limpa']}")
 elif n1 < n2:
     print(f"{cores['negritoazul']}O segundo número ({n2}) é MAIOR que o primeiro ({n1})!{cores['limpa']}")
 else:

@@ -12,9 +12,9 @@ nota2 = float(input(f"{cores['pretoebranco']}Qual foi a segunda nota do aluno?{c
 # Passo 2: Exibir se está aprovado, reprovado ou em recuperação
 media = (nota1 + nota2) / 2 
 if media >= 7.0:
-    print(f"{cores['negritoazul']}Sua média foi {media}. Você está APROVADO! Parabéns!{cores['limpa']}")
-elif 6.9 >= media >= 5.0:
-    print(f"{cores['negritoazul']}Sua média foi {media}. Você está em RECUPERAÇÃO! Estude mais!{cores['limpa']}")
+    print(f"{cores['negritoazul']}Sua média foi {media:.1f}. Você está APROVADO! Parabéns!{cores['limpa']}")
+elif 7 > media >= 5.0:
+    print(f"{cores['negritoazul']}Sua média foi {media:.1f}. Você está em RECUPERAÇÃO! Estude mais!{cores['limpa']}")
 else:
-    print(f"{cores['negritoazul']}Sua média foi {media}. Você está REPROVADO! Se esforce mais na próxima!{cores['limpa']}")
-# ------------------------------------------------------------------------------------------------------------------------| Desafio [040]
+    print(f"{cores['negritoazul']}Sua média foi {media:.1f}. Você está REPROVADO! Se esforce mais na próxima!{cores['limpa']}")
+# ----------------------------------------------------------------------------------------------------------------------------| Desafio [040]
