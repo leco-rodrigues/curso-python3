@@ -1,6 +1,7 @@
 # Faça um programa que mostre na tela uma contagem regressiva para o estouro de fogos de artifício, indo de 10 até 0, com uma pausa de 1 segundo entre eles.
 
 from time import sleep
+from playsound import playsound
 
 
 cores = {'limpa':'\033[m', 'pretoebranco':'\033[7;40m', 'negritoroxo':'\033[1;35m', 'negritociano':'\033[1;36m'}
@@ -22,11 +23,14 @@ if inicio > fim: # Condição para ser considerado uma contagem regressiva
 for contagem in range(inicio, fim + (progressiva_regressiva), passo):
     print(f"{cores['negritoroxo']}{contagem}{cores['limpa']}")
     if contagem != fim:
-        sleep(1)
+        sleep(+abs(passo))
 
-# Passo 3: Exibir a mensagem final
+# Passo 3: Exibir a mensagem final e o som
 print(f"{cores['negritoroxo']}BOOM!!!! 💀{cores['limpa']}")
 
 if mensagem:
     print(f"{cores['negritoroxo']}{mensagem}{cores['limpa']}")
-# -----------------------------------------------------------| Desafio [046]
+
+som_fogos = 'Mundo2/ex046_firework_single.mp3'
+playsound(som_fogos)
+# -----------------| Desafio [046]

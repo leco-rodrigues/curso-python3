@@ -1,5 +1,5 @@
 # Crie um programa que leia um frase qualquer e diga se ele é um palíndrmo, desconsiderando espaços.
-# Ex:
+    # Ex:
     # APOS A SOPA
     # A SACADA DA CASA
     # A TORRE DA DERROTA
@@ -7,7 +7,7 @@
     # ANOTARAM A DATA DA MARATONA
 
 # Passo 1: Receber um valor para "frase"
-frase = input('\033[7;40mDigite uma frase qualquer:\033[m\n').strip().upper()
+frase: str = input('\033[7;40mDigite uma frase qualquer:\033[m\n').strip().upper()
 
 # Passo 2: Exibir se é um palíndromo
 if frase.replace(' ', '') == frase.replace(' ', '')[::-1]:

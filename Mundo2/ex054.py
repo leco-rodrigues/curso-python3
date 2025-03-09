@@ -4,13 +4,13 @@ from datetime import datetime
 
 
 # Passo 1: Receber sete valores para "anos de nascimento"
-ano_atual = datetime.today().year
-maior_18 = 0
-menor_18 = 0
+ano_atual: int = datetime.today().year
+maior_18: int = 0
+menor_18: int = 0
 
 for pessoa in range(1, 8):
-    ano_nasc = int(input(f'\033[7;40mAno de nascimento da {pessoa}° pessoa:\033[m '))
-    idade = ano_atual - ano_nasc
+    ano_nasc:int = int(input(f'\033[7;40mAno de nascimento da {pessoa}° pessoa:\033[m '))
+    idade: int = ano_atual - ano_nasc
 
     if idade >= 18:
         maior_18 += 1

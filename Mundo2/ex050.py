@@ -3,12 +3,14 @@
 # Passo 1: Receber valores para seis "números"
 print('\033[1;35mEscolha seis números inteiros para realizar a soma daqueles que forem pares:\033[m\n')
 
-soma = 0
+soma: int = 0
+cont = 0
 for num in range(1, 7):
     n = int(input(f'\033[7;40mDigite o {num}° valor:\033[m '))
     if n % 2 == 0:
         soma += n
+        cont += 1
 
 # Passo 2: Exibir a soma
-print(f'\033[1;34mA soma dos números pares dentre os escolhidos é igual a {soma}.\033[m')
-# --------------------------------------------------------------------------------------| Desafio [050]
+print(f'\033[1;34mA soma dos números pares, que foram {cont}, dentre os escolhidos é igual a {soma}.\033[m')
+# ---------------------------------------------------------------------------------------------------------| Desafio [050]

@@ -1,9 +1,9 @@
 # Faça um programa que leia o peso de cinco pessoas. No final, motre qual foi o maior e o menor peso lidos.
 
 # Passo 1: Receber cinco valores para "pesos"
-pesos = []
+pesos: list[float] = []
 for pessoa in range(1, 6):
-    peso = input(f'\033[7;40mPeso (kg) da {pessoa}° pessoa:\033[m ')
+    peso:float = input(f'\033[7;40mPeso (kg) da {pessoa}° pessoa:\033[m ')
     pesos.append(peso)
 
 # Passo 2: Exibir o maior peso
