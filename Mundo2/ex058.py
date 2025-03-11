@@ -6,7 +6,7 @@ from random import randint
 from time import sleep
 
 
-# Passo 1: Receber valores para "número" e "palpite"
+# Passo 1: Solicitar valores para "número" e "palpite"
 print(styl(sep(7), color_ = 'c'), end = " ")
 print(styl("ADIVINHE O NÚMERO", 'bd', 'p'), end = " ")
 print(styl(sep(7), color_ = 'c'))

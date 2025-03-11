@@ -3,7 +3,7 @@
 from modulo import txt_style as styl, sep
 
 
-# Passo 1: Receber um valor para "sexo"
+# Passo 1: Solicitar um valor para "sexo"
 print(styl(sep(3), color_ = 'c'), end = " ")
 print(styl("SIGN UP INFORMATION", 'bd', 'p'), end = " ")
 print(styl(sep(3), color_ = 'c') + "\n")
