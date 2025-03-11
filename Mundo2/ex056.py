@@ -3,9 +3,6 @@
     # Qual é o nome do homem mais velho
     # Quantas mulheres têm menos de 20 anos.
 
-from typing import Optional
-
-
 cores: dict[str, str] = {
     'limpa':'\033[m',
     'inverso':'\033[7;40m',
@@ -14,7 +11,7 @@ cores: dict[str, str] = {
     'ciano':'\033[36m'
 }
 
-def sep(x: Optional[int] = None) -> str:
+def sep(x: int | None = None) -> str:
     if x is None:
         x: int = 22
     return f"{cores['ciano']}-={cores['limpa']}" * x
