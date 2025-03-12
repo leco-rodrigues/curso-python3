@@ -6,22 +6,29 @@ from modulo import txt_style as styl, sep
 
 
 # Passo 1: Solicitar um valor para "número"
-num: int = int(input(styl("Escolha um número:", 'n') + " "))
+print(styl(sep(6), color_ = 'c'), end = " ")
+print(styl("FACTORIAL", 'bd', 'p'), end = " ")
+print(styl(sep(6), color_ = 'c'))
+
+num: int = int(input(styl("Enter a number:", 'n') + " "))
 cont: int = 1
-fac: int = num * (num - cont)
+fac: int = 1
 
 # Passo 2: Exibir o fatorial
-numbers: list[str] = []
-for n in range(num, 0, -1):
-    numbers.append(n)
+numbers: list[int] = list(range(num, 0, -1))
 
 print(styl(f"{num}! = " + " x ".join(map(str, numbers)), 'bd', 'p' ))
-print(styl(f"{sep(num * 3)}", color_ = 'c'))
+print(styl(sep(num * 3 + 3), color_ = 'c'))
 
+if num == 1 or num == 0:
+    print(styl(str(1), 'bd', 'b'), end = " → ")
+
+fac = num
+cont = 1
 while cont < num - 1:
+    fac *= (num - cont)
     print(styl(f"{fac}", 'bd', 'b'), end = " → ")
     cont += 1
-    fac = fac * (num - cont)
 
-print(styl("FIM!", 'bd', 'y'))
+print(styl("END!", 'bd', 'y'))
 # ---------------------------| Desafio [060]
