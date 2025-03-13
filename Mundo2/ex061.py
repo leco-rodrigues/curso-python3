@@ -31,7 +31,7 @@ while cont != 10:
     term_x = term_n
     cont += 1
 
-print(styl(sep_(26, 'c')))
+print(sep_(26, 'c'))
 print(styl("The first 10 terms of that AP are: " + ", ".join(map(str, terms)) + ".", 'bd', 'b'))
 
 print(sep_(26, 'c'))
