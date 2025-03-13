@@ -70,7 +70,7 @@ def sepa_rator(length: int | None = None, color: str | None = None) -> str:
     return txt_style("-=-", color_ = color) * length
 
 
-def entry_validation(message: str = "Please enter a valid option.") -> str:
+def error_message(message: str = "Please enter a valid option.") -> None:
     """
     _summary_
 
@@ -86,4 +86,4 @@ def entry_validation(message: str = "Please enter a valid option.") -> str:
 if __name__ == "__main__":
     print(txt_style("Hello, World!", 'u', 'r', 'b'))
     print(sepa_rator())
-    print(entry_validation())
+    print(error_message())
