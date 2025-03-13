@@ -24,7 +24,8 @@ print(styl(f"You entered {len(numbers):,} numbers.", 'bd', 'b'))
 print(styl(sep(15), color_ = 'c'))
 
 # Passo 3: Exibir a soma
-print(styl(f"Their sum is {sum(numbers):,}.", 'bd', 'b'))
+sum_ = sum(numbers)
+print(styl(f"Their sum is {sum_:,}.", 'bd', 'b'))
 print(styl(sep(15), color_ = 'c'))
 
 print(styl("END", 'bd', 'y'))
