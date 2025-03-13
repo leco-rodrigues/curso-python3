@@ -11,8 +11,6 @@ print(styl("FACTORIAL", 'bd', 'p'), end = " ")
 print(styl(sep(6), color_ = 'c'))
 
 num: int = int(input(styl("Enter a number:", 'n') + " "))
-cont: int = 1
-fac: int = 1
 
 # Passo 2: Exibir o fatorial
 numbers: list[int] = list(range(num, 0, -1))
@@ -23,8 +21,8 @@ print(styl(sep(num * 3 + 3), color_ = 'c'))
 if num == 1 or num == 0:
     print(styl(str(1), 'bd', 'b'), end = " → ")
 
-fac = num
-cont = 1
+fac: int = num
+cont: int = 1
 while cont < num - 1:
     fac *= (num - cont)
     print(styl(f"{fac}", 'bd', 'b'), end = " → ")
