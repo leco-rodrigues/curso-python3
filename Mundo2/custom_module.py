@@ -57,6 +57,7 @@ def sepa_rator(length: int | None = None, color: str | None = None) -> str:
 
     Args:
         length (int | None, optional): _description_. Defaults to None.
+        color (str | None, optional): _description_. Defaults to None.
 
     Returns:
         str: _description_
@@ -78,7 +79,7 @@ def error_message(message: str = "Please enter a valid option.") -> None:
         message (str, optional): _description_. Defaults to "Please enter a valid option.".
 
     Returns:
-        str: _description_
+        _type_: _description_
     """
     return txt_style(message, 'bd', 'r')
 
