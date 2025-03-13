@@ -6,51 +6,60 @@
     # [5] sair do programa
 # Seu programa deverá realizar a operação solicitada em cada caso.
 
-from modulo import txt_style as styl, sep
+from custom_module import txt_style as styl, entry_validation as ent_val, sepa_rator as sep_
+from time import sleep
 
 
 # Passo 1: Solicitar valores para dois "números"
-title: str = "CHOOSE THE NUMBERS:"
-options: str = """
-[ 1 ] Add
+title: str = " CHOOSE THE NUMBERS "
+options: str = """[ 1 ] Add
 [ 2 ] Multiply
 [ 3 ] Find the biggest number
 [ 4 ] Enter new numbers
-[ 5 ] Exit program
-"""
-choice: int | None = None
-numbers: list[int] = []
+[ 5 ] Exit program"""
 
+numbers: list[int] = []
 while True:
 
     if not numbers:
-        print(styl(sep(4), color_ = 'c'), end = " ")
-        print(styl(f"{title}", 'bd', 'p'), end = " ")
-        print(styl(sep(4), color_ = 'c'), end = "\n")
+        print(styl(f"\t{title:=^40}\n", 'bd'))
 
-        for num in range(1, 3):
-            n: int = int(input(styl(f"{num}° número:", 'n') + " "))
-            numbers.append(n)
+        for n in range(1, 3):
+            num: int = int(input(styl(f"{n}° número:", 'n') + " "))
+            numbers.append(num)
 
-        print(styl(f"\nNumbers: {", ".join(map(str, numbers))}", 'bd', 'p'))
-        print(styl("\nChoose one option:", 'bd', 'p'))
-        print(styl(options, 'bd', 'p'))
+    num1, num2 = numbers
 
-    print(styl(sep(15), color_ = 'c'))
+    sleep(1)
+
+    print(sep_(color = 'c'))
+    print(styl(f"Numbers: {", ".join(map(str, numbers))}", 'bd', 'p'))
+    print(styl("\nOptions:", 'bd'))
+    print(styl(f"{options}", 'bd'))
+
+    print(sep_(color = 'c'))
     choice = int(input(styl("Choose an option:", 'n') + " "))
-    print(styl(sep(15), color_ = 'c'))
+    print(sep_(color = 'c'))
 
 # Passo 2: Exibir a soma
     if choice == 1:
-        print(styl(f"The sum of those numbers is equal to {sum(numbers)}.", 'bd', 'b'))
+        print(styl(
+            f"The sum between {num1} + {num2}" +
+            f" is equal to {sum(numbers):,}.", 'bd', 'b'
+        ))
 
 # Passo 3: Exibir o produto
     elif choice == 2:
-        print(styl(f"The product of those numbers is equal to {numbers[0] * numbers[1]}.", 'bd', 'b'))
+        print(styl(
+            f"The product between {num1} x {num2}" +
+            f" is equal to {num1 * num2:,}.", 'bd', 'b'
+        ))
 
 # Passo 4: Exibir o maior número
     elif choice == 3:
-        print(styl(f"The biggest number among them is {max(numbers)}.", 'bd', 'b'))
+        print(styl(
+            f"The biggest number between {num1} and {num2}" +
+            f" is {max(numbers):,}.", 'bd', 'b'))
 
 # Passo 5: Solicitar novos valores
     elif choice == 4:
@@ -58,10 +67,10 @@ while True:
 
 # Passo 6: Encerrar o programa
     elif choice == 5:
-        print(styl("Terminating program...", 'bd', 'y'))
+        print(styl("END", 'bd'))
         break
 
     # Exibe mensagem de erro para entradas inválidas
     else:
-        print(styl("Please enter a valid option.", 'bd', 'r'))
-# -----------------------------------------------------------| Desafio [059]
+        print(ent_val())
+# ---------------------| AULA 14 - ESTRUTURA DE REPETIÇÃO "WHILE" | DESAFIO [059]
