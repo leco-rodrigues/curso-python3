@@ -2,7 +2,7 @@
 # No final da execução, mostre a média entre todos os valores e qual foi o maior e o menor valores lidos.
 # O programa deve perguntar ao usuário se ele quer ou não continuar a digitar valores.
 
-from modulo import txt_style as styl, sep
+from Mundo2.custom_module import txt_style as styl, sep
 
 
 # Passo 1: Solicitar valores para "número inteiro"
@@ -33,4 +33,4 @@ print(styl(f"The lowest number is {min(numbers)}.", 'bd', 'b'))
 print(styl(sep(15), color_ = 'c'))
 
 print(styl("END", 'bd', 'y'))
-# --------------------------| Desafio [065]
+# --------------------------| AULA 14 - ESTRUTURA DE REPETIÇÃO "WHILE" | DESAFIO [065]
