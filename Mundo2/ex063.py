@@ -2,7 +2,7 @@
     # Ex:
     # 0 → 1 → 1 → 2 → 3 → 5 → 8
 
-from modulo import txt_style as styl, sep
+from Mundo2.custom_module import txt_style as styl, sep
 
 
 # Passo 1: Solicitar um valor para "número inteiro"
@@ -24,4 +24,4 @@ while cont < n - 2:
     cont += 1
 
 print(styl("END", 'bd', 'y'))
-# --------------------------| Desafio [063]
+# --------------------------| AULA 14 - ESTRUTURA DE REPETIÇÃO "WHILE" | DESAFIO [063]
