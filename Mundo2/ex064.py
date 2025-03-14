@@ -36,5 +36,5 @@ else:
     print(styl(f"The number is {numbers[0]}.", 'bd', 'p'))
 
 print(sep_(15, 'c'))
-print(styl("Exiting program", 'bd'))
-# ---------------------------------| AULA 14 - ESTRUTURA DE REPETIÇÃO "WHILE" | DESAFIO [064]
+print(styl("Exiting program...", 'bd'))
+# ------------------------------------| AULA 14 - ESTRUTURA DE REPETIÇÃO "WHILE" | DESAFIO [064]
