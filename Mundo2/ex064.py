@@ -2,7 +2,7 @@
 # O programa só vai parar quando o usuário digitar o valor 999, que é a condição de parada.
 # No final, mostre quantos números foram digitados e qual a soma entre eles (desconsiderando o flag).
 
-from modulo import txt_style as styl, sep
+from Mundo2.custom_module import txt_style as styl, sep
 
 
 # Passo 1: Solicitar valores para "número inteiro"
@@ -29,4 +29,4 @@ print(styl(f"Their sum is {sum_:,}.", 'bd', 'b'))
 print(styl(sep(15), color_ = 'c'))
 
 print(styl("END", 'bd', 'y'))
-# --------------------------| Desafio [064]
+# --------------------------| AULA 14 - ESTRUTURA DE REPETIÇÃO "WHILE" | DESAFIO [064]
