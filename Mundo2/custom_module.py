@@ -63,7 +63,7 @@ def sepa_rator(length: int | None = None, color: str | None = None) -> str:
         str: _description_
     """
     if length is None:
-        length = 19
+        length = 21
 
     if color is None:
         color = None
@@ -71,7 +71,7 @@ def sepa_rator(length: int | None = None, color: str | None = None) -> str:
     return txt_style("-=-", color_ = color) * length
 
 
-def error_message(message: str = "Please enter a valid option.") -> None:
+def error_message(message: str = "Please enter a valid option.") -> str:
     """
     _summary_
 
@@ -79,9 +79,16 @@ def error_message(message: str = "Please enter a valid option.") -> None:
         message (str, optional): _description_. Defaults to "Please enter a valid option.".
 
     Returns:
-        _type_: _description_
+        str: _description_
     """
     return txt_style(message, 'bd', 'r')
+
+
+def print_error(lenght: int | None = None) -> None:
+    """Print a formatted error message."""
+    print(sepa_rator(lenght, 'c'))
+    print(error_message())
+    print(sepa_rator(lenght, 'c'))
 
 
 if __name__ == "__main__":
