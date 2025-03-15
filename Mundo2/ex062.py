@@ -2,14 +2,7 @@
     # Melhore o DESAFIO 061, perguntando para o usuário se ele quer mostrar mais alguns termos.
     # O programa encerra quando ele disser que quer mostrar 0 termos.
 
-from custom_module import txt_style as styl, error_message as err_msg, sepa_rator as sep_
-
-
-def print_error() -> None:
-    """Print a formatted error message."""
-    print(sep_(22, 'c'))
-    print(err_msg())
-    print(sep_(22, 'c'))
+from custom_module import txt_style as styl, print_error, sepa_rator as sep_
 
 
 # Passo 1: Solicitar valores para "primeiro termo" e "razão"
