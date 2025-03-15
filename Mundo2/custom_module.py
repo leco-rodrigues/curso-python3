@@ -51,21 +51,18 @@ def txt_style(
     return f"\033[{';'.join(codes)}m{txt}\033[m"
 
 
-def sepa_rator(length: int | None = None, color: str | None = None) -> str:
+def sepa_rator(length: int | None = None, color: str | None = None) -> None:
     """
     _summary_
 
     Args:
         length (int | None, optional): _description_. Defaults to None.
         color (str | None, optional): _description_. Defaults to None.
-
-    Returns:
-        str: _description_
     """
     if length is None:
         length = 21
 
-    return txt_style("-=-", color_ = color) * length
+    print(txt_style("-=-", color_ = color) * length)
 
 
 def yes_no(choice: str) -> bool:
@@ -79,36 +76,36 @@ def yes_no(choice: str) -> bool:
         bool: _description_
     """
     if choice in ('yes', 'y', 'no', 'n'):
+
         if choice in ('yes', 'y'):
             return True
         elif choice in ('no', 'n'):
             return False
 
-def error_message(message: str | None = None) -> str:
+def error_message(message: str | None = None) -> None:
     """
     _summary_
 
     Args:
-        message (str, optional): _description_. Defaults to "Please enter a valid option.".
-
-    Returns:
-        str: _description_
+        message (str | None, optional): _description_. Defaults to None.
     """
     if message is None:
         message = "Please enter a valid option."
 
-    return txt_style(message, 'bd', 'r')
+    print(txt_style(message, 'bd', 'r'))
 
 
-def print_error(lenght: int | None = None, message: str | None = None) -> None:
+def print_error(message: str | None = None, lenght: int | None = None) -> None:
     """Print a formatted error message."""
-    print(sepa_rator(lenght, 'c'))
-    print(error_message(message))
-    print(sepa_rator(lenght, 'c'))
+    sepa_rator(lenght, 'c')
+    error_message(message)
+    sepa_rator(lenght, 'c')
 
 
 if __name__ == "__main__":
     print(txt_style("Hello, World!", 'u', 'r', 'b'))
-    print(sepa_rator())
     print(error_message())
+    print(sepa_rator())
     print(yes_no('y'))
+    print(yes_no('n'))
+    print_error()
