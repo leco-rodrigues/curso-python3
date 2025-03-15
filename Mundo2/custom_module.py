@@ -68,14 +68,21 @@ def sepa_rator(length: int | None = None, color: str | None = None) -> str:
     return txt_style("-=-", color_ = color) * length
 
 
-def yes_no(choice: str | None = None) -> bool:
-    if choice in ('yes', 'y'):
-        return True
-    if choice in ('no', 'n'):
-        return False
-    else:
-        return print_error()
+def yes_no(choice: str) -> bool:
+    """
+    _summary_
 
+    Args:
+        choice (str): _description_
+
+    Returns:
+        bool: _description_
+    """
+    if choice in ('yes', 'y', 'no', 'n'):
+        if choice in ('yes', 'y'):
+            return True
+        elif choice in ('no', 'n'):
+            return False
 
 def error_message(message: str | None = None) -> str:
     """
