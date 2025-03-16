@@ -36,7 +36,7 @@ while True:
             print_error("Invalid input. Please enter an integer between 0 and 10.")
 
     sep_(color = 'c')
-    total = computer + player_num
+    total: int = computer + player_num
 
     print(styl(f"Player's choice: {player_choice}\n" + f"Player: {player_num} + Computer: {computer} = {total}", 'bd', 'p'))
 
