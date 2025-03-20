@@ -22,27 +22,18 @@ while True:
 sep_(color = 'c')
 
 # Passo 2: Exibir cédulas entregues
-bills_50 = withdraw // 50
-withdraw %= 50
+bills: dict[int, int] = {
+    50: withdraw // 50,
+    20: (withdraw % 50) // 20,
+    10: (withdraw % 20) // 10,
+    1: (withdraw % 10)
+}
 
-bills_20 = withdraw // 20
-withdraw %= 20
+print(styl("Bills Distribution:\n", 'bd', 'p'))
 
-bills_10 = withdraw // 10
-withdraw %= 10
-
-bills_1 = withdraw
-
-print(styl("Bills distribution:", 'bd', 'p'))
-
-if bills_50:
-    print(styl(f"R$50 bills = {bills_50}", 'bd', 'p'))
-if bills_20:
-    print(styl(f"R$20 bills = {bills_20}", 'bd', 'p'))
-if bills_10:
-    print(styl(f"R$10 bills = {bills_10}", 'bd', 'p'))
-if bills_1:
-    print(styl(f"R$1 bills = {bills_1}", 'bd', 'p'))
+for bill, count in bills.items():
+    if count:
+        print(styl(f"R${bill:<2} bills: {count:2}", 'bd', 'p'))
 
 sep_(color = 'c')
 
