@@ -36,11 +36,11 @@ while True:
             print_error("Invalid input. Please enter an integer.")
 
     while True:
-        gender: str = str(input(styl("Gender (M/F)", 'n') + " ")).strip().lower()
+        gender: str = str(input(styl("Gender (M/F)", 'n') + " ")).strip().upper()
 
-        if gender in ("m", "f"):
+        if gender in ("M", "F"):
 
-            if gender == 'm':
+            if gender == 'M':
                 count_man += 1
 
             break
@@ -48,7 +48,7 @@ while True:
         else:
             print_error("Invalid input. Please enter 'M' for masculine or 'F' for feminine.")
 
-    if age < 20 and gender == 'f':
+    if age < 20 and gender == 'F':
         woman_younger_20 += 1
 
     while True:
