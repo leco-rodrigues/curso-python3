@@ -38,7 +38,7 @@ while True:
     sep_(color = 'c')
     total: int = computer + player_num
 
-    print(styl(f"Player's choice: {player_choice}\n" + f"Player: {player_num} + Computer: {computer} = {total}", 'bd', 'p'))
+    print(styl(f"Player's choice: {player_choice}\n" + f"Player: {player_num} + Computer: {computer} = {total} ({'even' if total % 2 == 0 else 'odd'})", 'bd', 'p'))
 
     if (total % 2 == 0 and player_choice == "even") or (total % 2 == 1 and player_choice == 'odd'):
         print(styl("Player wins!", 'bd', 'g'))
