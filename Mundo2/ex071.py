@@ -11,7 +11,7 @@ print(styl(f"\t{' ATM ':=^40}\n", 'bd'))
 
 while True:
     try:
-        withdraw: int = int(input(styl("How much do you want to withdraw:", 'n') + " R$"))
+        withdraw: int = int(input(styl("How much do you want to withdraw?", 'n') + " R$"))
         if withdraw > 0:
             break
         else:
@@ -22,21 +22,20 @@ while True:
 sep_(color = 'c')
 
 # Passo 2: Exibir cédulas entregues
-bills: dict[int, int] = {
-    50: withdraw // 50,
-    20: (withdraw % 50) // 20,
-    10: (withdraw % 20) // 10,
-    1: (withdraw % 10)
-}
+bills_available: list[int] = [50, 20, 10, 1]
+bills_distribution: dict[int, int] = {}
+
+for bill in bills_available:
+    bills_distribution[bill], withdraw = divmod(withdraw, bill)
 
 print(styl("Bills Distribution:\n", 'bd', 'p'))
 
-for bill, count in bills.items():
+for bill, count in bills_distribution.items():
     if count:
         print(styl(f"R${bill:<2} bills: {count:2}", 'bd', 'p'))
 
 sep_(color = 'c')
 
 # Passo 3: Exibir mensagem de encerramento
-print(styl("Exiting the program... Thank you for using it! 😄"))
-# --------------------------------------------------------------| AULA 15 - INTERROMPENDO REPETIÇÕES "WHILE" | DESAFIO [071]
+print(styl("Exiting the program... Thank you for using it! 😄", 'bd'))
+# --------------------------------------------------------------------| AULA 15 - INTERROMPENDO REPETIÇÕES "WHILE" | DESAFIO [071]
