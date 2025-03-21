@@ -65,7 +65,7 @@ print(styl(f"Total spent: R${total:,.2f}", 'bd', 'p'))
 sep_(color = 'c')
 
 # Passo 3: Exibir quantos custam mais de R$1000,00
-print(styl(f"Number of products above R$1000.00: {above_1000:,}", 'bd', 'p'))
+print(styl(f"Products above R$1000.00: {above_1000:,}", 'bd', 'p'))
 sep_(color = 'c')
 
 # Passo 4: Exibir o nome do mais barato
