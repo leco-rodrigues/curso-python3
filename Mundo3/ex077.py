@@ -2,15 +2,16 @@
     # Crie um programa que tenha uma tupla com várias palavras (não usar acentos).
     # Depois disso, você deve mostrar, para cada palavra, quais são as suas vogais.
 
-from Mundo2.custom_module import txt_style as styl, print_error, sepa_rator as sep_
-
-
 # Passo 1: Criar uma tupla com "palavras"
-
+words: tuple = ("my", "name", "is", "i", "do", "not", "remember")
 
 # Passo 2: Exibir as vogais de cada palavra
+vogals: tuple = ("a", "e", "i", "o", "u")
 
+for i, word in enumerate(words):
+    if word.split() in vogals:
+        print(word)
 
 # Passo 3: Exibir mensagem de encerramento
-print(styl("Exiting program... Thank you for using it! 😄", 'bd'))
-# ----------------------------------------------------------------| AULA 16 - TUPLAS | DESAFIO [077]
+print("\nExiting program... Thank you for using it! 😄")
+# ------------------------------------------------------| AULA 16 - TUPLAS | DESAFIO [077]
