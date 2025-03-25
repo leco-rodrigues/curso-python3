@@ -9,7 +9,7 @@ from random import randint
 numbers: tuple[int, ...] = (randint(0, 100),randint(0, 100), randint(0, 100), randint(0, 100), randint(0, 100))
 
 # Passo 2: Exibir a listagem
-print(f"Os números nessa tupla são: {numbers}")
+print(f"Os números sorteados foram: {numbers}")
 
 # Passo 3: Exibir o menor
 print(f"\nO menor número é: {min(numbers)}")
