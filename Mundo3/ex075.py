@@ -25,7 +25,7 @@ else:
 even_numbers: list[int] = [num for num in numbers if num % 2 == 0]
 
 if even_numbers:
-    print(f"\nThe even number{'s are' if len(even_numbers) > 1 else ' is'}: {', '.join(map(str, even_numbers))}")
+    print(f"\nThe even number{'s are' if len(even_numbers) > 1 else ' is'} {', '.join(map(str, even_numbers))}.")
 else:
     print("\nThere are no even numbers.")
 
