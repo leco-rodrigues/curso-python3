@@ -9,14 +9,14 @@ words: tuple[str, ...] = ("My", "Name", "Is", "I", "Do", "Not", "Remember")
 vowels: str = ("AaEeIiOoUu")
 
 for word in words:
-    vogal_list: list[str] = []
+    vowel_list: list[str] = []
 
     for letter in word:
-        if (letter in vowels) and (letter not in vogal_list):
-            vogal_list.append(letter)
+        if (letter in vowels) and (letter not in vowel_list):
+            vowel_list.append(letter)
         
-    if vogal_list:
-        print(f"The word '{word}' has the vogal(s) '{', '.join(vogal_list).lower()}'.")
+    if vowel_list:
+        print(f"The word '{word}' has the vowel(s) '{', '.join(vowel_list).lower()}'.")
     else:
         print(f"The word '{word}' has no vowels.")
 
