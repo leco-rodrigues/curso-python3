@@ -6,10 +6,13 @@
 phrase: str = str(input("Enter a mathematical expression: "))
 
 # Passo 2: Exibir se os parênteses estão abertos e fechados corretamente
-if (phrase.count("(") == phrase.count(")")):
-    print("That's a valid expression.")
+if phrase.count("("):
+    if (phrase.count("(") == phrase.count(")")):
+        print("That's a valid expression.")
+    else:
+        print("That's not a valid expression.")
 else:
-    print("That's not a valid expression.")
+    print("You forgot the parentheses!")
 
 # Passo 3: Exibir mensagem de encerramento
 print("Exiting program... Thank you for using it! 😄")
