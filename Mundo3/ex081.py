@@ -32,7 +32,7 @@ print(f"The list is: {', '.join(map(str, numbers))}")
 
 # Passo 2: Exibir contagem de números
 count_num: int = len(numbers)
-print(f"There {'are' if count_num > 1 else 'is'} {count_num} number{'s' if count_num > 1 else ''} in this list.")
+print(f"There {'are' if count_num > 1 else 'is'} {count_num} element{'s' if count_num > 1 else ''} in this list.")
 
 # Passo 3: Exibir em ordem decrescente
 reverse_list: list [float] = sorted(numbers, reverse = True)
