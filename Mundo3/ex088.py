@@ -2,7 +2,7 @@
     # Faça um programa que ajude um jogador da MEGA SENA a criar palpites.
     # O programa vai perguntar quantos jogos serão gerados e vai sortear 6 números entre 1 e 60 para cada jogo, cadastrando tudo em uma lista composta.
 
-from random import randint, sample
+from random import sample
 from time import sleep
 
 
@@ -27,7 +27,7 @@ print("-------")
 for count in range(games):
     games_guesses.append(sorted(sample(range(1, 61), 6)))
 
-    print(games_guesses[count])
+    print(f"Game {count + 1}: {games_guesses[count]}")
     print("-------")
     sleep(1)
 
