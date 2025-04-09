@@ -12,7 +12,7 @@ matriz: list[int] = [
 for n in range(1,10):
     while True:
         try:
-            num: int = int(input(f"Please enter the {n}{'st' if n == 1 else 'nd' if n == 2 else 'rd' if n == 3 else 'th'} number for the matrix 3x3: "))
+            num: int = int(input(f"Please enter the {n}{'st' if n == 1 else 'nd' if n == 2 else 'rd' if n == 3 else 'th'} element for the matrix 3x3: "))
             
             if len(matriz[0]) < 3:
                 matriz[0].append(num)
