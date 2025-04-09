@@ -76,5 +76,5 @@ print(f"The heaviest weight is {heaviest_weight} kg and the person{'s are' if le
 print(f"The lightest weight is {lightest_weight} kg and the person{'s are' if len(lightest_person) > 1 else ' is'}: {lightest_person}")
 
 # Passo 5: Exibir mensagem de encerramento
-print("Exiting program... Than you for using it! 😄")
-# ---------------------------------------------------| AULA 18 - LISTAS (PARTES 2) | DESAFIO [084]
+print("Program finished. Than you for using it! 😄")
+# --------------------------------------------------| AULA 18 - LISTAS (PARTES 2) | DESAFIO [084]
