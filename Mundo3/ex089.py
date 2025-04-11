@@ -2,77 +2,84 @@
     # Crie um programa que leia nome e duas notas de vários alunos e guarde tudo em uma lista composta.
     # No final, mostre um boletim contendo a média de cada um e permita que o usuário possa mostrar as notas de cada aluno individualmente.
 
+
+def yes_no(question: str = "Do you want to continue? (y/n) ") -> bool:
+    while True:
+        choice: str = str(input(question))
+        if choice not in ("yes", "y", "no", "n"):
+            error_message("-------\nInvalid input! Please enter 'yes'/'y' or 'no'/'n'.")
+            continue
+        if choice in ("yes", "y"):
+            return True
+        return False
+
+def error_message(message: str = "Invalid input!") -> None:
+    print(message)
+
 # Passo 1: Solicitar valores para "nome" e "notas" em uma lista composta
-print("----------\n SCHOOL GRADES\n----------\n")
-
-grades: list[list[str, int]] = [[], []]
+student_grades: list[list[object]] = []
 
 while True:
-    name: str = str(input("-------\nStudent's name: ")).strip()
-    if (not name and all(c.isalpha() or c.isspace() for c in name)):
-        print("-------\nInvalid input! Please enter a valid name.")
-        continue
-    grades[0].append(name)
+    while True:
+        name: str = str(input("-------\nName: ")).strip()
+        if (not name) or (not all(c.isalpha() or c.isspace() for c in name)):
+            error_message("-------\nInvalid input! Please enter a valid name.")
+            continue
+        break
 
-    i: int = 1
-    while i <= 2:
+    while True:
         try:
-            grade: float = float(input(f"Grade {i}: "))
+            grade1: float = float(input("-------\nGrade 1: "))
+            if 0 > grade1 or 10 < grade1:
+                error_message("-------\nInvalid input! Please enter a grade between 0 and 10.")
+                continue
+            break
         except ValueError:
-            print("-------\nInvalid input! Please enter a valid grade.\n-------\n")
-            continue
-        grades[1].append(grade)
-        i += 1
+            error_message("-------\nInvalid input! Please enter a valid grade.")
 
     while True:
-        question: str = str(input("\n-------\nDo you want to enter more school grades? (y/n) "))
-        if question in ("yes", "y", "no", "n"):
+        try:
+            grade2: float = float(input("-------\nGrade 2: "))
+            if 0 > grade2 or 10 < grade2:
+                error_message("-------\nInvalid input! Please enter a grade between 0 and 10.")
+                continue
             break
-        print("-------\nInvalid input! Please enter 'yes'/'y' or 'no'/'n'.")
+        except ValueError:
+            error_message("-------\nInvalid input! Please enter a valid grade.")
 
-    if question in ("no", "n"):
+    average: float = (grade1 + grade2) / 2
+    data_temp: list[list[object]] = [name, [grade1, grade2], average]
+    student_grades.append(data_temp)
+
+    if not yes_no("----------\n\nDo you want to add another student's grade? (y/n) "):
         break
 
-# Passo 2: Exibir a média de cada um
-print("-------")
-print("\n----------\n MEDIA \n----------\n")
+# Passo 2: Exibir a média
+print(f"\n ----------\n{'Nº':<3} | {'NAME':<13}| {'AVERAGE'}\n" + "-" * 28)
+for i in range(len(student_grades)):
+    print(f"{i:03} | {student_grades[i][0]:<13}| {student_grades[i][2]:<.1f}")
 
-i: int = 0
-while i < len(grades[0]):
-    for grade in range(0, len(grades[1]), 2):
-        media: float = (grades[1][grade] + grades[1][grade + 1]) / 2
-        print(f"-------\nThe student {grades[0][i]}'s media is {media}.\n-------\n")
-        i += 1
+print(" ----------\n")
 
-# Passo 3: Exibir individualmente
+# Passo 3: Exibir notas individualmente
 while True:
-    try:
-        student: int = int(input(f"-------\nWhat student's grades do you want to see? (0 to {len(grades[0]) - 1}) "))
-        if 0 > student or student >= len(grades[0]):
-            print(f"-------\nInvalid input! Please enter a valid index (0 to {len(grades[0]) - 1}).")
-            continue
-    except ValueError:
-        print(f"-------\nInvalid input! Please enter a valid index (0 to {len(grades[0]) - 1}).")
-        continue
-
-    if student == 0:
-        media = (grades[1][student] + grades[1][student + 1]) / 2
-        print(f"-------\nThe student {grades[0][student]}'s media is {media}.\n-------\n")
-    else:
-        media = (grades[1][student + 1] + grades[1][student + 2]) / 2
-        print(f"-------\nThe student {grades[0][student]}'s media is {media}.\n-------\n")
-
-    while True:
-        question: str = str(input("-------\nDo you want to see another student's grade? (y/n) "))
-        if question in ("yes", "y", "no", "n"):
-            break
-        print("-------\nInvalid input! Please enter 'yes'/'y' or 'no'/'n'.")
-
-    if question in ("no", "n"):
+    if not yes_no("-------\nDo you want to see a student's grades? (y/n) "):
         break
 
-print("-------\n")
+    while True:
+        try:
+            student: int = int(input("-------\nEnter the student's number: "))
+            if student >= len(student_grades):
+                error_message(f"-------\nInvalid input! Please enter a valid number (0 to {len(student_grades) - 1}).")
+                continue
+            break
+        except ValueError:
+            error_message("-------\nInvalid input! Please enter a valid number.")
+            continue
+
+    grades: list[float] = student_grades[student][1]
+    print(f"-------\nName: {student_grades[student][0]} | Grades: {grades[0]:.1f}, {grades[1]:.1f}")
 
 # Passo 4: Exibir mensagem de encerramento
-print("Program finished. Thanks for using it! 😄")
-# ------------------------------------------------| AULA 18 - LISTAS (PARTE 2) | DESAFIO [089]
+print("\n----------\nProgram finished. Thanks for using it! 😄\n----------\n")
+# ----------------------------------------------------------------------------| AULA 18 - LISTAS (PARTE 2) | DESAFIO [089]
