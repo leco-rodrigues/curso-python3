@@ -25,9 +25,9 @@ while True:
     except ValueError:
         error_message()
 
-student_record["name"] = name
-student_record["average"] = average
-student_record["status"] = "Approved ✅" if average >= 7 else "Failed ❌"
+student_record["Name"] = name
+student_record["Average"] = average
+student_record["Status"] = "Approved ✅" if average >= 7 else "Failed ❌"
 
 # Passo 2: Exibir conteúdo
 print("\n----------\n")
