@@ -4,6 +4,7 @@
     # No final, coloque esse dicionário em ordem. sabendo que o vencedor tirou o maior número no dado.
 
 from random import randint
+from time import sleep
 
 
 # Passo 1: Solicitar valores aleatórios para 4 "jogadores"
@@ -16,6 +17,7 @@ for j in range(4):
 
 for k, v in results.items():
     print(f"{k} = {v}")
+    sleep(1)
 
 # Passo 2: Exibir o ranking
 print("\n----------\nRANKING\n----------\n")
@@ -26,6 +28,7 @@ rank: int = 1
 for rank, (k, v) in enumerate(sorted_results, start = 1):
     print(f"{rank} - {k} = {v}")
     rank += 1
+    sleep(1)
 
 # Passo 3: Exibir mensagem de encerramento
 print("\n----------\nProgram finished. Thanks for playing! 😄\n----------\n")
