@@ -7,7 +7,7 @@ path.append("C:/Users/Usuario/Documents/MeusProjetos/Passa-Tempo/Misc")
 from functions import txt_style as styl, print_error, sepa_rator as sep_, name_it
 from datetime import datetime
 
-def get_birth_year(question: str = "Year of birth:") -> int:
+def year_birth(question: str = "Year of birth:") -> int:
     prompt: str = question.strip()
     while True:
         try:
@@ -28,7 +28,7 @@ worker_data: dict[str, object] = {}
 
 name = name_it()
 current_year = datetime.now().year
-birth_year = get_birth_year()
+birth_year = year_birth()
 age: int = current_year - birth_year
 
 while True:
