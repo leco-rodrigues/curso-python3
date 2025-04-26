@@ -14,7 +14,7 @@ def yes_or_no(question: str = "Do you want to continue?") -> bool:
             if answer in ("yes", "y"):
                 return True
             return False
-        raise ValueError("Please enter 'yes'/'y' or 'no'/'n'.")
+        print("Please enter 'yes'/'y' or 'no'/'n'.")
 
 
 # Passo 1: Solicite valores para "nome", "sexo" e "idade"
@@ -75,7 +75,7 @@ print(f"-------\nRegistered people: {num_registrations}\n-------")
 
 # Passo 3: Exibir a média de idade
 average_age = sum_age / num_registrations if num_registrations > 0 else 0
-print(f"Average age: {average_age}\n-------")
+print(f"Average age: {int(average_age)}\n-------")
 
 # Passo 4: Exibir uma lista com as mulheres
 if woman_list:

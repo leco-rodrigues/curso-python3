@@ -26,7 +26,7 @@ sorted_results = sorted(results.items(), key = lambda x: x[1], reverse = True)
 
 rank: int = 1
 for rank, (k, v) in enumerate(sorted_results, start = 1):
-    print(f"{rank} - {k} = {v}")
+    print(f"{rank}º - {k} = {v}")
     rank += 1
     sleep(1)
 

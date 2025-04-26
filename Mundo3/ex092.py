@@ -60,10 +60,11 @@ if ctps != 0:
         except ValueError:
             print_error("Invalid input! Please enter a valid salary.")
 
-    retirement: int = hire_year + 35
+    retirement_year: int = hire_year + 35
+    retirement_age: int = (hire_year - birth_year) + 35
     worker_data["Year of hire"] = hire_year
     worker_data["Salary"] = f"R${salary:.2f}"
-    worker_data["Retirement"] = retirement
+    worker_data["Retirement"] = str(retirement_year) + f", ({retirement_age} years)"
 
 # Passo 3: Exibir informações
 sep_(10, "c")
