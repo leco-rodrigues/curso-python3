@@ -54,8 +54,7 @@ def somaPar(random_int_list: list[int], pausar: bool = True) -> None:
             print(n, end = " | ", flush = True)
             sumEven += n
             count += 1
-            if pausar:
-                sleep(1)
+            sleep(1)
     print("FIM\n")
     sleep(1)
 
