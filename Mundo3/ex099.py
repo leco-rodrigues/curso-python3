@@ -102,14 +102,17 @@ def maior(*numeros: int) -> int:
         sleep(1)
 
     print("FIM")
+    sleep(1)
     display_message_box(f"Quantidade de valores analisados: {count} \nMaior valor apresentado: {num_maior}", "-", 7, False)
 
 
 # Passo 2: Exibir o "maior valor"
 display_message_box("EXIBIR O MAIOR VALOR", "-")
 
-maior(1, 2, 5, 8, 9, 7, 6, 3, 4, 1)
-maior(-1, -2, -8, -5, -3, -1)
+maior(2,9,4,5,7,1)
+maior(4,7,0)
+maior(1,2)
+maior(6)
 maior()
 
 # Passo 3: Exibir mensagem de encerramento:
