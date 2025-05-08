@@ -128,7 +128,7 @@ def contador(inicio: int = None, fim: int = None, passo: int = None) -> None:
     exibir_contagem(inicio, fim, passo)
 
 # Passo 2: Exibir "contagem progressiva" (1, 10, 1)
-contador(10, 1, 1)
+contador(1, 10, 1)
 
 # Passo 3: Exibir "contagem regressiva" (10, 0, 2)
 contador(10, 0, 2)
