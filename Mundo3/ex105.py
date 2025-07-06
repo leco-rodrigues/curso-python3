@@ -32,12 +32,13 @@ def notas(*notas: float, situacao: bool = False) -> dict[str: object]:
     for nota in notas:
         soma_notas += nota
     media_turma = soma_notas / total_notas
+    media_turma_formatada = f"{media_turma:.2f}"
 
     notas_dict: dict[str: object] = {}
     notas_dict["Total"] = total_notas
     notas_dict["Maior"] = maior_nota
     notas_dict["Menor"] = menor_nota
-    notas_dict["Média"] = media_turma
+    notas_dict["Média"] = media_turma_formatada
 
     if situacao:
         if media_turma >= 8:
@@ -52,7 +53,7 @@ def notas(*notas: float, situacao: bool = False) -> dict[str: object]:
 
 
 # Passo 2: Exibir o resultado
-print(notas(5, 2, 3, 5, 8, situacao=True))
+print(notas(5.5, 2.5, 1.5, situacao=True))
 
 # Passo 3: Exibir mensagem de encerramento
 display_exit_message()
