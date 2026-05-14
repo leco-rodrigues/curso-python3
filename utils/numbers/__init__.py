@@ -6,3 +6,6 @@ def metade(n: float) -> float:
 
 def aumentar(n: float, p: float) -> float:
     return n * (1 + (p / 100))
+
+def diminuir(n: float, p: float) -> float:
+    return n * (1 - (p / 100))
