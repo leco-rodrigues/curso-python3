@@ -25,3 +25,6 @@ def yes_no(question: str = "-------\nDo you want to continue? (y/n) ") -> bool:
         if choice in ("yes", "y"):
             return True
         return False
+
+def error_message(message: str = "Invalid input!") -> None:
+    print(message)
