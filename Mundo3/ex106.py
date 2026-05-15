@@ -6,12 +6,10 @@
 
 from time import sleep
 
-
 def display_exit_message(message: str = None) -> None:
     if (not message):
         message = "Exiting program... Thanks for using it! 😄"
     print(message)
-
 
 # Passo 1: Criar função que faça uso do Interactive Help do Python
 def ihs_python(pergunta: str = "Função ou Biblioteca: ") -> None:
@@ -26,7 +24,6 @@ def ihs_python(pergunta: str = "Função ou Biblioteca: ") -> None:
         print(f"\n----------\nACESSANDO O MANUAL DO COMANDO '{funcao_biblioteca}'\n----------\n")
         sleep(1)
         help(funcao_biblioteca)
-
 
 # Passo 2: Exibir o resultado
 ihs_python()
