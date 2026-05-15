@@ -8,17 +8,20 @@ from utils.strings import exit_message, display_message_box
 from utils import numbers
 
 # Passo 2: Criar um programa que utilize essas funções
-salario: float = 1500
-salario_dobro: float = numbers.dobro(salario)
-salario_metade: float = numbers.metade(salario)
-salario_aumentado: float = numbers.aumentar(salario, 50)
-salario_diminuido: float = numbers.diminuir(salario, 50)
+valor: float = float(input("Digite um valor: R$"))
+aumento: float = float(input("Deseja um aumento de quantos %? "))
+desconto: float = float(input("Deseja um desconto de quantos %? "))
+
+valor_dobro: float = numbers.dobro(valor)
+valor_metade: float = numbers.metade(valor)
+valor_aumentado: float = numbers.aumentar(valor, desconto)
+valor_descontado: float = numbers.diminuir(valor, desconto)
 
 # Passo 3: Exibir o resultado
-print(f"O dobro do seu salário de R${salario:.2f} é igual a R${salario_dobro:.2f}")
-print(f"A metade do seu salário de R${salario:.2f} é igual a R${salario_metade:.2f}")
-print(f"O aumento de 50% no seu salário de R${salario:.2f} é igual a R${salario_aumentado:.2f}")
-print(f"A diminuição de 50% no seu salário de R${salario:.2f} é igual a R${salario_diminuido:.2f}")
+print(f"O dobro de {valor} é igual a {valor_dobro}.")
+print(f"A metade de {valor} é igual a {valor_metade}.")
+print(f"Um aumento de {aumento}% sobre {valor} é igual a {valor_aumentado}.")
+print(f"Um desconto de {desconto}% sobre {valor} é igual a {valor_descontado}.")
 
 # Passo 4: Exibir uma mensagem de encerramento
 display_message_box(exit_message(), sep = "-")
