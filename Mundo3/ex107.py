@@ -24,5 +24,5 @@ print(f"Um aumento de {aumento}% sobre {valor} é igual a {valor_aumentado}.")
 print(f"Um desconto de {desconto}% sobre {valor} é igual a {valor_descontado}.")
 
 # Passo 4: Exibir uma mensagem de encerramento
-display_message_box(exit_message(), sep = "-")
-# -------------------------------------------| AULA 22 - MÓDULOS E PACOTES | DESAFIO [107]
+display_message_box(exit_message())
+# --------------------------------| AULA 22 - MÓDULOS E PACOTES | DESAFIO [107]
