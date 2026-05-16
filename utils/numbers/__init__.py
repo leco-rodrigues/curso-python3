@@ -32,9 +32,21 @@ def resumo(n: float, a: float, d: float) -> None:
     n_desconto: float = diminuir(n, d)
     
     print("-" * 25 + "\n     RESUMO DO VALOR\n" + "-" * 25)
-    print(f"Valor:           {moeda(n)}")
-    print(f"Dobro:           {n_dobro}")
-    print(f"Metade:          {n_metade}")
+    print(f"Valor:            {moeda(n)}")
+    print(f"Dobro:            {n_dobro}")
+    print(f"Metade:           {n_metade}")
     print(f"Aumento de {a}%:  {n_aumento}")
     print(f"Desconto de {d}%: {n_desconto}")
     print("-" * 25)
+
+def leiaDinheiro(n: str = None) -> float:
+    while True:
+        n: str = input("Digite um valor: R$")
+        n_formatted: str = n.replace(",", ".")
+
+        if not(n_formatted.strip().replace(".", "").isdigit()):
+            print(f"ERRO: '{n_formatted}' não é um valor monetário válido.")
+            continue
+        break
+    n_formatted = float(n_formatted)
+    return n_formatted
