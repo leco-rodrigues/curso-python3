@@ -7,7 +7,7 @@ def display_message_box(text: str = None, sep: str = None, sep_multi: int = None
     if(not text):
         text = "Olá, Mundo!"
     if(not sep):
-        sep = "~"
+        sep = "-"
     if(not sep_multi):
         sep_multi = len(text) + 4
     if(central):
