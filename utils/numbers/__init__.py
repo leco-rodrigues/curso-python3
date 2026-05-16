@@ -26,10 +26,10 @@ def moeda(n: float, m: str = "R$") -> str:
     return f"{m}{n:.2f}".replace(".", ",")
 
 def resumo(n: float, a: float, d: float) -> None:
-    n_dobro: float = dobro(n)
-    n_metade: float = metade(n)
-    n_aumento: float = aumentar(n, a)
-    n_desconto: float = diminuir(n, d)
+    n_dobro: float = dobro(n, True)
+    n_metade: float = metade(n, True)
+    n_aumento: float = aumentar(n, a, True)
+    n_desconto: float = diminuir(n, d, True)
     
     print("-" * 25 + "\n     RESUMO DO VALOR\n" + "-" * 25)
     print(f"Valor:            {moeda(n)}")
