@@ -12,10 +12,10 @@ valor: float = float(input("Digite um valor: R$"))
 aumento: float = float(input("Deseja um aumento de quantos %? "))
 desconto: float = float(input("Deseja um desconto de quantos %? "))
 
-valor_dobro: float = numbers.dobro(valor)
-valor_metade: float = numbers.metade(valor)
-valor_aumentado: float = numbers.aumentar(valor, desconto)
-valor_descontado: float = numbers.diminuir(valor, desconto)
+valor_dobro: float = numbers.dobro(valor, False)
+valor_metade: float = numbers.metade(valor, False)
+valor_aumentado: float = numbers.aumentar(valor, desconto, False)
+valor_descontado: float = numbers.diminuir(valor, desconto, False)
 
 # Passo 3: Exibir o resultado
 print(f"O dobro de {valor} é igual a {valor_dobro}.")
