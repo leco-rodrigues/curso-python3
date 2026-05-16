@@ -1,5 +1,8 @@
-def dobro(n: float) -> float:
-    return n * 2
+def dobro(n: float, format: bool = True) -> float:
+    n = n * 2
+    if(format):
+       n = moeda(n)
+    return n
 
 def metade(n: float) -> float:
     return n / 2
@@ -12,3 +15,5 @@ def diminuir(n: float, p: float) -> float:
 
 def moeda(n: float) -> str:
     return f"R${n:.2f}".replace(".", ",")
+
+print(dobro(10, False))
