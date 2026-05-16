@@ -4,8 +4,11 @@ def dobro(n: float, format: bool = True) -> float:
        n = moeda(n)
     return n
 
-def metade(n: float) -> float:
-    return n / 2
+def metade(n: float, format: bool = True) -> float:
+    n = n / 2
+    if(format):
+        n = moeda(n)
+    return n
 
 def aumentar(n: float, p: float) -> float:
     return n * (1 + (p / 100))
