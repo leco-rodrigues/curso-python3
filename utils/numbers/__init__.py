@@ -42,11 +42,11 @@ def resumo(n: float, a: float, d: float) -> None:
 def leiaDinheiro(n: str = None) -> float:
     while True:
         n: str = input("Digite um valor: R$")
-        n_formatted: str = n.replace(",", ".")
+        n_formatado: str = n.replace(",", ".")
 
-        if not(n_formatted.strip().replace(".", "").isdigit()):
-            print(f"ERRO: '{n_formatted}' não é um valor monetário válido.")
+        if not(n_formatado.strip().replace(".", "").isdigit()):
+            print(f"ERRO: '{n_formatado}' não é um valor monetário válido.")
             continue
         break
-    n_formatted = float(n_formatted)
-    return n_formatted
+    n_formatado = float(n_formatado)
+    return n_formatado
