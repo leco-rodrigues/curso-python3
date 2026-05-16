@@ -1,29 +1,29 @@
-def dobro(n: float, format: bool = True) -> float:
+def dobro(n: float, format: bool = False) -> float:
     n = n * 2
     if(format):
        n = moeda(n)
     return n
 
-def metade(n: float, format: bool = True) -> float:
+def metade(n: float, format: bool = False) -> float:
     n = n / 2
     if(format):
         n = moeda(n)
     return n
 
-def aumentar(n: float, p: float, format: bool = True) -> float:
+def aumentar(n: float, p: float, format: bool = False) -> float:
     n = n * (1 + (p / 100))
     if(format):
         n = moeda(n)
     return n
 
-def diminuir(n: float, p: float, format: bool = True) -> float:
+def diminuir(n: float, p: float, format: bool = False) -> float:
     n = n * (1 - (p / 100))
     if(format):
         n = moeda(n)
     return n
 
-def moeda(n: float) -> str:
-    return f"R${n:.2f}".replace(".", ",")
+def moeda(n: float, m: str = "R$") -> str:
+    return f"{m}{n:.2f}".replace(".", ",")
 
 def resumo(n: float, a: float, d: float) -> None:
     n_dobro: float = dobro(n)
