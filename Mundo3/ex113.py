@@ -14,17 +14,30 @@ def leiaInt(pergunta: str = "Digite um número inteiro:") -> int:
         except (ValueError, TypeError):
             print("ERRO: Por favor, digite um número inteiro.")
         except KeyboardInterrupt:
-            print("ERRO: O usuário decidiu interromper a ação.")
+            print("\nERRO: O usuário decidiu interromper a ação.")
             return 0
         else:
             return n
 
 # Passo 2: Criar função leiaFloat()
+def leiaFloat(pergunta: str = "Digite um número decimal:") -> float:
+    prompt: str = pergunta.strip() + " "
+    while True:
+        try:
+            n: float = float(input(prompt))
+        except (ValueError, TypeError):
+            print("ERRO: Por favor digite um número decimal.")
+        except KeyboardInterrupt:
+            print("\nERRO: O usuário decidiu interromper a ação.")
+            return 0
+        else:
+            return n
 
 # Passo 3: Exibir o resultado
 n_inteiro = leiaInt()
+n_decimal = leiaFloat()
 
-display_message_box(f"O número inteiro digitado foi {n_inteiro}.")
+display_message_box(f"O número inteiro digitado foi {n_inteiro} e o número decimal foi {n_decimal:.2f}.", central = False)
 
 # Passo 4: Exibir uma mensagem de encerramento
 display_message_box(exit_message())
