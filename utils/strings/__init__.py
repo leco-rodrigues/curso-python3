@@ -13,7 +13,7 @@ def display_message_box(text: str = None, sep: str = None, sep_multi: int = None
     if(central):
         text = "  " + text
     separator: str = sep * sep_multi
-    message: str = f"\n{separator}\n{text}\n{separator}\n"
+    message: str = f"{separator}\n{text}\n{separator}\n"
     print(message)
 
 def yes_no(question: str = "-------\nDo you want to continue? (y/n) ") -> bool:
