@@ -4,10 +4,12 @@
     # O sistema só vai ter 2 opções: cadastrar uma nova pessoas e
     # listar todas as pessoas cadastradas.
 
+from utils.strings import exit_message, display_message_box
+
 # Passo 1: Criar o sistema
 
 # Passo 2: Exibir o resultado
 
 # Passo 3: Exibir uma mensagem de encerramento
-
-# -| AULA 23 - TRTAMENTO DE ERROS E EXCEÇÕES | DESAFIO [115]
+display_message_box(exit_message())
+# --------------------------------| AULA 23 - TRTAMENTO DE ERROS E EXCEÇÕES | DESAFIO [115]
