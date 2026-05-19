@@ -1,16 +1,16 @@
 def exit_message(message: str = None) -> str:
-    if(not message):
+    if not message:
         message = "Exiting program... Thanks for using it! 😄"
     return message
 
 def display_message_box(text: str = None, sep: str = None, sep_multi: int = None, central: bool = True) -> None:
-    if(not text):
+    if not text:
         text = "Olá, Mundo!"
-    if(not sep):
+    if not sep:
         sep = "-"
-    if(not sep_multi):
+    if not sep_multi:
         sep_multi = len(text) + 4
-    if(central):
+    if central:
         text = "  " + text
     separator: str = sep * sep_multi
     message: str = f"{separator}\n{text}\n{separator}\n"
@@ -27,7 +27,7 @@ def yes_no(question: str = "-------\nDo you want to continue? (y/n) ") -> bool:
         return False
 
 def error_message(message: str = "ERROR:", color: bool = True) -> None:
-    if(color):
+    if color:
         print(f"\033[31m{message}\033[m")
     else:
         print(message)
