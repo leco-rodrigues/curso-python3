@@ -6,32 +6,10 @@
 from utils.strings import exit_message, display_message_box
 
 # Passo 1: Reescrever a função leiaInt()
-def leiaInt(pergunta: str = "Digite um número inteiro:") -> int:
-    prompt: str = pergunta.strip() + " "
-    while True:
-        try:
-            n: int = int(input(prompt))
-        except (ValueError, TypeError):
-            print("ERRO: Por favor, digite um número inteiro.")
-        except KeyboardInterrupt:
-            print("\nERRO: O usuário decidiu interromper a ação.")
-            return 0
-        else:
-            return n
+from utils.numbers import leiaInt
 
 # Passo 2: Criar função leiaFloat()
-def leiaFloat(pergunta: str = "Digite um número real:") -> float:
-    prompt: str = pergunta.strip() + " "
-    while True:
-        try:
-            n: float = float(input(prompt))
-        except (ValueError, TypeError):
-            print("ERRO: Por favor digite um número real.")
-        except KeyboardInterrupt:
-            print("\nERRO: O usuário decidiu interromper a ação.")
-            return 0
-        else:
-            return n
+from utils.numbers import leiaFloat
 
 # Passo 3: Exibir o resultado
 n_inteiro = leiaInt()
