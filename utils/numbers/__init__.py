@@ -63,3 +63,16 @@ def leiaInt(pergunta: str = "Digite um número inteiro:") -> int:
             return 0
         else:
             return n
+
+def leiaFloat(pergunta: str = "Digite um número real:") -> float:
+    prompt: str = pergunta.strip() + " "
+    while True:
+        try:
+            n: float = float(input(prompt))
+        except (ValueError, TypeError):
+            print("ERRO: Por favor digite um número real.")
+        except KeyboardInterrupt:
+            print("\nERRO: O usuário decidiu interromper a ação.")
+            return 0
+        else:
+            return n
