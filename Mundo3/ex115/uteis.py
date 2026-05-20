@@ -1,5 +1,5 @@
 from utils.colors import text_color
-from utils.strings import error_message
+from utils.strings import error_message, display_message_box
 from utils.numbers import leiaInt
 from pathlib import Path
 
@@ -35,4 +35,10 @@ def cadastrar() -> dict[str, object]:
 def adcionar_cadastro(nome: str, idade: int) -> None:
     caminho_arq: str = Path("C:/Users/alexr/OneDrive/Documentos/Meus Projetos/curso-python3/Mundo3/ex115/pessoas.txt")
     with caminho_arq.open("a", encoding = "utf-8") as arq:
-        arq.write(f"{nome}, {idade} anos")
+        arq.write(f"{nome}, {idade} anos\n")
+
+def exibir_cadastros() -> None:
+    caminho_aqr: str = Path("C:/Users/alexr/OneDrive/Documentos/Meus Projetos/curso-python3/Mundo3/ex115/pessoas.txt")
+    with caminho_aqr.open("r", encoding = "utf-8") as arq:
+        conteudo: object = arq.read()
+        print(conteudo)
