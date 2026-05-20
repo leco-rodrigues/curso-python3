@@ -1,5 +1,7 @@
 from utils.colors import text_color
 from utils.strings import error_message
+from utils.numbers import leiaInt
+from pathlib import Path
 
 def menu(pergunta: str = "Sua opção:") -> int:
     print("-" * 26 + "\n" + "MENU".center(26) + "\n" + "-" * 26)
@@ -22,3 +24,15 @@ def menu(pergunta: str = "Sua opção:") -> int:
                 return escolha
             else:
                 error_message(text_color("ERRO: Por favor, digite uma opção válida.", "vermelho"))
+
+def cadastrar() -> dict[str, object]:
+    nome: str = input("Nome: ")
+    idade: int = leiaInt("Idade: ")
+    pessoa: dict[str, object] = {"nome": nome, "idade": idade}
+
+    return pessoa
+
+def adcionar_cadastro(nome: str, idade: int) -> None:
+    caminho_arq: str = Path("C:/Users/alexr/OneDrive/Documentos/Meus Projetos/curso-python3/Mundo3/ex115/pessoas.txt")
+    with caminho_arq.open("a", encoding = "utf-8") as arq:
+        arq.write(f"{nome}, {idade} anos")
