@@ -50,3 +50,16 @@ def leiaDinheiro(n: str = None) -> float:
         break
     n_formatado = float(n_formatado)
     return n_formatado
+
+def leiaInt(pergunta: str = "Digite um número inteiro:") -> int:
+    prompt: str = pergunta.strip() + " "
+    while True:
+        try:
+            n: int = int(input(prompt))
+        except (ValueError, TypeError):
+            print("ERRO: Por favor, digite um número inteiro.")
+        except KeyboardInterrupt:
+            print("\nERRO: O usuário decidiu interromper a ação.")
+            return 0
+        else:
+            return n
