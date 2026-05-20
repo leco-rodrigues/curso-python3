@@ -5,11 +5,27 @@
     # listar todas as pessoas cadastradas.
 
 from utils.strings import exit_message, display_message_box
-
+from utils.colors import text_color
 # Passo 1: Criar o sistema
+import uteis
 
 # Passo 2: Exibir o resultado
+escolha: int = uteis.menu()
+
+if escolha == 1:
+    uteis.exibir_cadastros()
+
+if escolha == 2:
+    pessoa: dict[str, object] = uteis.cadastrar()
+    nome: str = pessoa["nome"]
+    idade: int = pessoa["idade"]
+
+    uteis.adcionar_cadastro(nome, idade)
+
+    display_message_box(text_color("Cadastro realizado com sucesso!", "verde"), sep_multi = 26)
 
 # Passo 3: Exibir uma mensagem de encerramento
-display_message_box(exit_message())
-# --------------------------------| AULA 23 - TRTAMENTO DE ERROS E EXCEÇÕES | DESAFIO [115]
+if escolha == 3:
+    msg: str = exit_message("Saindo do programa")
+    display_message_box(text_color(msg, "vermelho"), sep_multi = 26)
+# -----------------------------------------------------------------| AULA 23 - TRTAMENTO DE ERROS E EXCEÇÕES | DESAFIO [115]
