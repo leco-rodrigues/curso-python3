@@ -4,7 +4,7 @@
     # O sistema só vai ter 2 opções: cadastrar uma nova pessoas e
     # listar todas as pessoas cadastradas.
 
-from utils.strings import exit_message, display_message_box
+from utils.strings import exit_message, display_message_box, error_message
 from utils.colors import text_color
 # Passo 1: Criar o sistema
 import uteis
@@ -13,7 +13,10 @@ import uteis
 escolha: int = uteis.menu()
 
 if escolha == 1:
-    uteis.exibir_cadastros()
+    try:
+        uteis.exibir_cadastros()
+    except:
+        error_message(text_color("ERRO: Arquivo não existe!", "vermelho"))
 
 if escolha == 2:
     pessoa: dict[str, object] = uteis.cadastrar()
