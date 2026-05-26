@@ -31,3 +31,8 @@ def error_message(message: str = "ERROR:", color: bool = True) -> None:
         print(f"\033[31m{message}\033[m")
     else:
         print(message)
+
+def sep_rator(m: int = None) -> None:
+    if not m:
+        m = 20
+    print(f"-" * {m})
