@@ -16,13 +16,15 @@ def display_message_box(text: str = None, sep: str = None, sep_multi: int = None
     message: str = f"{separator}\n{text}\n{separator}\n"
     print(message)
 
-def yes_no(question: str = None) -> bool:
+def yes_no(question: str = None, invalid_answear: str = None) -> bool:
     if not question:
         question = "Do you want to continue? (y/n) "
+    if not invalid_answear:
+        invalid_answear = "Invalid input! Please enter 'yes'/'y' or 'no'/'n'."
     while True:
         choice: str = str(input(question))
         if choice not in ("yes", "y", "no", "n"):
-            print("-------\nInvalid input! Please enter 'yes'/'y' or 'no'/'n'.")
+            error_message(invalid_answear)
             continue
         if choice in ("yes", "y"):
             return True
