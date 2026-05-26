@@ -32,7 +32,9 @@ def error_message(message: str = "ERROR:", color: bool = True) -> None:
     else:
         print(message)
 
-def sep_rator(m: int = None) -> None:
-    if not m:
-        m = 20
-    print(f"-" * {m})
+def sep_rator(sep: str = None, sep_multi: int = None) -> None:
+    if not sep:
+        sep = "-"
+    if not sep_multi:
+        sep_multi = 20
+    print(f"{sep}" * sep_multi)
