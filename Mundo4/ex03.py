@@ -12,7 +12,7 @@ from utils.colors import text_color
 from perguntas import pergunta
 
 # Passo 1: Responder à pergunta
-pergunta("Quem foi o criador da linguagem SmallTalk, umas das primieras linguagens OO?",
+pergunta("Quem foi o criador da linguagem SmallTalk, umas das primeiras linguagens OO?",
          "Edsger Dijkstra", "Guido Van Rossum", "Alan Kay", "Kristen Nygaard", "C")
 
 # Passo 2: Exibir uma mensagem de encerramento
