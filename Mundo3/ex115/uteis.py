@@ -1,5 +1,5 @@
 from utils.colors import text_color
-from utils.strings import error_message, display_message_box
+from utils.strings import error_message
 from utils.numbers import leiaInt
 from pathlib import Path
 
