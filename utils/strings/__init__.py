@@ -34,7 +34,9 @@ def yes_no(question: str = None, positive_answear: list[str] = None, negative_an
             return True
         return False
 
-def error_message(message: str = "ERROR:", color: bool = True) -> None:
+def error_message(message: str = None, color: bool = True) -> None:
+    if not message:
+        message = "ERROR: "
     if color:
         print(f"\033[31m{message}\033[m")
     else:
