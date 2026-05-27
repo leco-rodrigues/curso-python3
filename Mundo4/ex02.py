@@ -12,7 +12,7 @@ from perguntas import pergunta
 
 # Passo 1: Responder à pergunta
 pergunta("Qual das características a seguir identifica as primeiras linguagens lineares?",
-         "Maior modularidade", "Desvios forçados com GOTO", "Estruturas de ocntrole", "Instruções de baixo nível", "B")
+         "Maior modularidade", "Desvios forçados com GOTO", "Estruturas de controle", "Instruções de baixo nível", "B")
 
 # Passo 2: Exibir uma mensagem de encerramento
 display_message_box(text_color(exit_message(), "amarelo"))
