@@ -26,7 +26,7 @@ def pergunta(perg: str, a: str, b: str, c: str, d: str, resp: str) -> None:
             error_message("Alternativa incorreta!")
             sep_rator(sep_multi = 60)
 
-            if not yes_no(text_color("Você quer continuar? (y/n) ", "azul"), ["sim", "s"], ["não", "n"], "ERRO: Por favor, digite 'sim'/'s' ou 'não','n'"):
+            if not yes_no(text_color("Você quer continuar? (s/n) ", "azul"), ["sim", "s"], ["não", "n"], "ERRO: Por favor, digite 'sim'/'s' ou 'não','n'"):
                 break
         except KeyboardInterrupt:
             sep_rator(sep_multi = 60)
