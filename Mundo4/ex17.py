@@ -16,7 +16,6 @@ class Produto:
         return caixa
         
 # Passo 3: Exibir o resultado
-
 p1 = Produto("Cadeira Gamer", 1_000.00)
 print(p1.etiqueta())
 

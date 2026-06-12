@@ -5,7 +5,7 @@ from rich import print
 
 # Passo 1: Criar a classe Funcionario
 class Funcionario:
-    empresa: str = "Curso em Video"
+    EMPRESA: str = "Curso em Video"
 
     def __init__(self, nome: str, setor: str, cargo: str):
         self.nome = nome
