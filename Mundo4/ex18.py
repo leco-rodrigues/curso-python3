@@ -36,4 +36,4 @@ Cada pessoa pagará [yellow]R${custo_pessoa:.2f}[/] para participar.
 c1 = Churrasco("Churras dos Amigos", 15)
 print(c1.analise())
 
-# -| AULA 06 - Aprenda Programação Orientada a Objetos com Desafios em Python | DESAFIO 18
+# -| AULA 06 - APRENDA PROGRAMAÇÃO ORIENTADA A OBJETOS COM DESAFIOS EM PYTHON | DESAFIO 18
