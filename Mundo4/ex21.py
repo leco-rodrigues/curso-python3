@@ -18,7 +18,10 @@ class Caneta:
     def escrever(self, texto:str):
         cores: dict[str, str] = {"azul":"blue", "vermelho":"red", "verde":"green"}
 
-        print(f"[{cores[self.cor]}]{texto}[/]", end = "")
+        if self.tampada:
+            print(f"A {cores[self.cor]}caneta[/] está tampada.")
+        else:
+            print(f"[{cores[self.cor]}]{texto}[/]", end = "")
 
 # Passo 4: Criar método para quebrar linha
     def quebrar_linha(self, numero: int):
