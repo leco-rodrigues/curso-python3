@@ -6,11 +6,10 @@ from rich.panel import Panel
 
 # Passo 1: Criar classe Gamer
 class Gamer:
-    favoritos: list[str] = []
-
     def __init__(self, nome: str, nick: str):
         self.nome = nome
         self.nick = nick
+        self.favoritos: list[str] = []
 
 # Passo 2: Criar método para adicionar os jogos favoritos
     def add_favoritos(self, jogo: str):
