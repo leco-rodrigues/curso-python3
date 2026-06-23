@@ -19,17 +19,17 @@ Você agora está na[/] [yellow]página {self.pagina}[/]
     def avancar_paginas(self, paginas: int):
         cont: int = 0
         for i in range(1, paginas + 1):
-            self.pagina += 1
+            Livro.pagina += 1
             cont += 1
 
             print(f"Pág{self.pagina} ▶", end = " ")
 
-            if  self.pagina >= self.paginas:
+            if  Livro.pagina >= self.paginas:
                 break
 
-        print(f"[blue]Você avançou {cont} páginas e agora está na[/] [yellow]página {self.pagina}[/]")
+        print(f"[blue]Você avançou {cont} páginas e agora está na[/] [yellow]página {Livro.pagina}[/]")
 
-        if self.pagina == self.paginas:
+        if Livro.pagina == self.paginas:
             print(f":closed_book: [red]Você chegou ao final do livro {self.titulo}[/]")
 
 # Passo 3: Exibir o resultado
