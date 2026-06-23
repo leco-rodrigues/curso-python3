@@ -18,13 +18,13 @@ class Churrasco:
 
 # Passo 2: Criar um método para analisar o necessário de carne, o custo total e por pessoa
     def analise(self):
-        quant_carne: float = self.CONS_PESSOA * self.quant
-        custo_total: float = self.PRECO * quant_carne
+        quant_carne: float = Churrasco.CONS_PESSOA * self.quant
+        custo_total: float = Churrasco .PRECO * quant_carne
         custo_pessoa: float = custo_total / self.quant
 
         caixa = Panel(f"""
 Analisando [green]{self.titulo}[/] com [blue]{self.quant} convidado{'s' if self.quant > 1 else ''}[/]
-Cada participante comerá {self.CONS_PESSOA}Kg e cada Kg custa R${self.PRECO:.2f}
+Cada participante comerá {Churrasco.CONS_PESSOA}Kg e cada Kg custa R${Churrasco.PRECO:.2f}
 Recomendo [blue]comprar {quant_carne:.3f}Kg[/] de carne
 O custo total será de [green]R${custo_total:.2f}[/]
 Cada pessoa pagará [yellow]R${custo_pessoa:.2f}[/] para participar.
