@@ -13,6 +13,9 @@ class Caneta:
     def destampar(self):
         self.tampada = False
 
+    def tampar(self):
+        self.tampada = True
+
 # Passo 3: Criar método para escrever
     def escrever(self, texto:str):
         cores: dict[str, str] = {"azul":"blue", "vermelho":"red", "verde":"green"}
