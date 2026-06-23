@@ -5,10 +5,9 @@ from rich import print
 
 # Passo 1: Criar classe Caneta
 class Caneta:
-    tampada: bool = True
-
     def __init__(self, cor: str):
         self.cor = cor
+        self.tampada: bool = True
 
 # Passo 2: Criar método para destampar
     def destampar(self):
