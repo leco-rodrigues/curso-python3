@@ -9,7 +9,6 @@ from abc import ABC, abstractmethod
 
 # Passo 1: Criar classe abstrata BebidaQuente
 class BebidaQuente(ABC):
-    
 
 # Passo 2: Criar método preparar()
     def preparar(self) -> None:
@@ -35,9 +34,9 @@ class BebidaQuente(ABC):
     def servir(self) -> str:
         pass
 
+
 # Passo 6: Criar subclasse Cafe
 class Cafe(BebidaQuente):
-
 
     def misturar(self) -> str:
         return "Passando água pressurizada pelo pó de café moído."
@@ -45,9 +44,9 @@ class Cafe(BebidaQuente):
     def servir(self) -> str:
         return "Servindo em xícara pequena."
 
+
 # Passo 7: Criar subclasse Cha
 class Cha(BebidaQuente):
-
 
     def misturar(self) -> str:
         return "Mergulhando o sachê de ervas na água."
@@ -55,9 +54,9 @@ class Cha(BebidaQuente):
     def servir(self) -> str:
         return "Servindo na caneca de porcelana com limão."
 
+
 # Passo 8: Criar subclasse Leite
 class Leite(BebidaQuente):
-
 
     def misturar(self) -> str:
         return "Passando vapor pressurizado pelo bico do leite."
@@ -65,8 +64,14 @@ class Leite(BebidaQuente):
     def servir(self) -> str:
         return "Servindo na caneca grande, já com café."
 
+
 # Passo 9: Exibir o resultado
-bebida = Cafe()
-bebida.preparar()
+b1: Cafe = Cafe()
+b2: Cha = Cha()
+b3: Leite = Leite ()
+
+b1.preparar()
+b2.preparar()
+b3.preparar()
 
 # -| AULA 09 - DESAFIOS DE HERANÇA, ABSTRAÇÃO E CLASSES | DESAFIO 24
