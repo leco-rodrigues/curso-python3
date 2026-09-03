@@ -10,13 +10,13 @@ from rich.panel import Panel
 
 # Passo 1: Criar classe abstrata Funcionario
 class Funcionario(ABC):
-    salario_minimo: float = 1621
-    inss: float = 7.5
-    salario: float = salario_minimo
+    salario_minimo: float = 1_612
+    desconto_inss: float = 7.5
 
-    def __init__(self, nome: str, salario_bruto: float = salario_minimo) -> None:
+    def __init__(self, nome: str) -> None:
         self.nome = nome
-        self.salario_bruto = salario_bruto
+        self.salario_bruto: float = 0
+        self.salario: float = 0
 
 # Passo 2: Criar método abstrato calc_sal()
     @abstractmethod
@@ -31,24 +31,25 @@ class Funcionario(ABC):
 
 # Passo 4: Criar subclasse Horista
 class Horista(Funcionario):
-    def __init__(self, nome: str, valor_hora: float, horas_trabalhadas: float) -> None:
+    def __init__(self, nome: str, valor_hora: float = 7.37, horas_trabalhadas: float = 220) -> None:
         super().__init__(nome)
         self.valor_hora = valor_hora
         self.horas_trabalhadas = horas_trabalhadas
+        self.salario_bruto = self.valor_hora * self.horas_trabalhadas
 
     def calcular_salario(self) -> float:
-        self.salario_bruto = self.valor_hora * self. horas_trabalhadas
-        valor_desconto: float = (self.salario_bruto * self.inss) / 100
+        valor_desconto: float = (self.salario_bruto * Funcionario.desconto_inss) / 100
         self.salario = self.salario_bruto - valor_desconto
         return self.salario
 
 # Passo 5: Criar subclasse Mensalista
 class Mensalista(Funcionario):
     def __init__(self, nome: str, salario_bruto: float = Funcionario.salario_minimo) -> None:
-        super().__init__(nome, salario_bruto)
+        super().__init__(nome)
+        self.salario_bruto = salario_bruto
 
     def calcular_salario(self) -> float:
-        valor_desconto: float = (self.salario_bruto * self.inss) / 100
+        valor_desconto: float = (self.salario_bruto * self.desconto_inss) / 100
         self.salario = self.salario_bruto - valor_desconto
         return self.salario
         
