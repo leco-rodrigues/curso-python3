@@ -17,9 +17,10 @@ from rich import print, inspect
 
 
 def ano_valido(ano: int) -> bool:
-    ano_atual: int = datetime.datetime.now().year
-    if ano > ano_atual or ano < (ano_atual - 120):
-        return False
+    if type(ano) is int:
+        ano_atual: int = datetime.datetime.now().year
+        if ano > ano_atual or ano < (ano_atual - 120):
+            return False
     return True
 
 
