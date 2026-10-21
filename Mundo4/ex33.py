@@ -13,7 +13,7 @@
 
 from abc import ABC
 import datetime
-from rich import print, inspect
+from rich import inspect
 
 
 def ano_valido(ano: int) -> bool:

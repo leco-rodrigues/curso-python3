@@ -29,15 +29,17 @@ class Termostato:
             elif Termostato.MAX < valor:
                 self.__temperatura = Termostato.MAX
         else:
-            print(f"Temperatura de {valor}°C é inválida!")
+            raise ValueError(f"Temperatura de {valor:.1f}°C é inválida!")
 
     @property
     def ftemperatura(self) -> str:
-        return f"{self.__temperatura}°C"
+        return f"{self.__temperatura:.1f}°C"
 
 # Passo 2: Exibir o resultado
 t: Termostato = Termostato()
-t.temperatura = 30
+# t.temperatura = 12
+t.temperatura = 26
+# t.temperatura = 33
 
 print(f"A temperatura atual é de {t.ftemperatura}")
 # -| AULA 12 - DOMINE ENCAPSULAMENTO EM PYTHON COM GETTERS, SETTERS E 6 PROJETOS REAIS | DESAFIO 28
