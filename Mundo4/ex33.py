@@ -12,13 +12,13 @@
         # add_curso(curso)
 
 from abc import ABC
-import datetime
-from rich import inspect
+from datetime import datetime
+from rich import print, inspect
 
 
 def ano_valido(ano: int) -> bool:
     if type(ano) is int:
-        ano_atual: int = datetime.datetime.now().year
+        ano_atual: int = datetime.now().year
         if ano > ano_atual or ano < (ano_atual - 120):
             return False
     return True
@@ -46,7 +46,7 @@ class Pessoa(ABC):
 
     @property
     def idade(self) -> int:
-        ano_atual: int = datetime.datetime.now().year
+        ano_atual: int = datetime.now().year
         return ano_atual - self._nascimento
 
     @idade.setter
@@ -69,15 +69,19 @@ class Aluno(Pessoa):
 
     @curso.setter
     def curso(self, curso: str) -> None:
-        if curso in self.cursos_oficiais:
+        if curso in Aluno.cursos_oficiais:
             self._curso = curso
         else:
             raise ValueError(f"O curso {curso} não está na lista de cursos oficiais")
 
 # Passo 3: Criar método add_curso(curso)
     def add_curso(self, curso: str) -> None:
-        if curso not in self.cursos_oficiais:
-            self.cursos_oficiais.append(curso)
+        curso = curso.strip().upper()
+        if curso not in Aluno.cursos_oficiais:
+            if 3 <= len(curso) <= 5:
+                self.cursos_oficiais.append(curso)
+            else:
+                raise ValueError(f"Nome {curso} está fora do padrão para curso oficiais")
         else:
             raise ValueError(f"O curso {curso} já está na lista de cursos oficiais")
 
@@ -92,5 +96,6 @@ a1.add_curso("MODA")
 a1.nascimento = 2010
 a1.curso = "MODA"
 
+print(a1.idade)
 inspect(a1, private=True, methods=True)
 # -| AULA 12 - DOMINE ENCAPSULAMENTO EM PYTHON COM GETTERS, SETTERS E 6 PROJETOS REAIS | DESAFIO 33
