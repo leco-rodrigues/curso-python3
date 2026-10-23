@@ -13,6 +13,8 @@ def main():
     b.emitir_som()
     c.emitir_som()
     d.emitir_som()
+    e.emitir_som()
+    f.emitir_som()
 
 if __name__ == "__main__":
     main()
